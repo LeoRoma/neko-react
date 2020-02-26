@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   getCatsImages() {
-    fetch("https://api.thecatapi.com/v1/images?1b5970e3-2ecc-4bb9-9d75-d8a644120226")
+    fetch("https://api.thecatapi.com/v1/images/search?breed_id=abys")
       .then(response => response.json())
       .then(result => this.setState({ catsImages: result }))
       .then(result => console.log(this.state.catsImages))
