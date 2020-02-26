@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cats from './components/Cats'
 
 import './App.css';
 
@@ -12,7 +13,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log(this.state.items);
-    fetch("https://api.thecatapi.com/v1/categories?1b5970e3-2ecc-4bb9-9d75-d8a644120226")
+    fetch("https://api.thecatapi.com/v1/breeds?1b5970e3-2ecc-4bb9-9d75-d8a644120226")
       .then(response => response.json())
       .then(result => this.setState({ cats: result }))
       .then(result => console.log(this.state.cats))
@@ -21,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello Cat
+        <Cats />
       </div>
     );
   };
