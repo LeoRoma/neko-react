@@ -22,7 +22,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cats />
+        <Cats 
+          cats={this.state.cats}/>
       </div>
     );
   };
