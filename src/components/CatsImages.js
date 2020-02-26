@@ -1,13 +1,20 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class CatsImages extends Component{
+class CatsImages extends Component {
   render() {
-    return(
+    return (
       <div>
-        Cat Image Here
+        {this.props.catsImages.map((catimage) =>
+          <div>
+            <p>{catimage}</p>
+            {/* <img src=></img> */}
+          </div>
+        )}
+
+        HEllo
       </div>
-    ) 
-  }
+    )
+  };
 };
 
 export default CatsImages;
