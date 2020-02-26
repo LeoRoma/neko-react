@@ -22,8 +22,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cats 
-          cats={this.state.cats}/>
+        <Cats
+          cats={this.state.cats} />
       </div>
     );
   };
