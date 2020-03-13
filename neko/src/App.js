@@ -40,7 +40,7 @@ class App extends Component {
     })
     console.log(this.state.breed)
     console.log('hello')
-    window.location.reload(false);
+    // window.location.reload(false);
   }
   render() {
 
@@ -49,6 +49,7 @@ class App extends Component {
         <Home
           cats={this.state.cats}
           getBreed={this.getBreed.bind(this)}
+          breeds={this.state.breeds}
         />
         {/* <Cats
           cats={this.state.cats}

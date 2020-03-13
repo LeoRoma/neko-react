@@ -19,6 +19,7 @@ class Home extends Component {
         <Frame
           cats={this.props.cats}
           getBreed={this.props.getBreed.bind(this)}
+          breeds={this.props.breeds}
         />
       </div>
     )

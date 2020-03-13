@@ -20,16 +20,20 @@ class Dropdown extends Component {
     this.props.getBreed(this.state.breed)
   }
   render() {
-
-    // console.log(this.state)
+    const breeds = this.props.breeds;
+    breeds.map((breed) => {
+      console.log(breed.id)
+    })
+    const optionBreeds = breeds.map((breed) => 
+      <option key={breed.id}>{breed.name}</option>
+    ) 
     return (
       <div>
         <FormControl>
-        <InputLabel htmlFor="grouped-native-select">Grouping</InputLabel>
+        <InputLabel htmlFor="grouped-native-select"></InputLabel>
         <Select onClick={this.handleBreed} native defaultValue="" input={<Input id="grouped-native-select" />}>
           <optgroup label="Category 1">
-            <option value="abys">Abyssianian</option>
-            <option value="aege">Aegean</option>
+            {optionBreeds}
           </optgroup>
         </Select>
       </FormControl>
