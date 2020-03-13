@@ -24,7 +24,7 @@ class Cats extends Component {
                     <h2>{breed.origin}</h2>
                     <h3>{breed.temperament}</h3>
                     <p>{breed.description}</p>
-                    <a href="breed.wikipedia_url">More details</a>
+                    <a href={breed.wikipedia_url}>More details</a>
                   </div>
                 )
               }
