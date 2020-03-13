@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Navbar from './Navbar';
 import Frame from './Frame'
-
+import Test from './Test'
 
 class Home extends Component {
   constructor(props) {
@@ -21,6 +21,7 @@ class Home extends Component {
           getBreed={this.props.getBreed.bind(this)}
           breeds={this.props.breeds}
         />
+        <Test />
       </div>
     )
   }

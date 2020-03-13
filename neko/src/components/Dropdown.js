@@ -16,16 +16,13 @@ class Dropdown extends Component {
   }
 
   handleBreed = event => {
-    this.setState({ breed: event.target.value })
-    this.props.getBreed(this.state.breed)
+    this.props.getBreed(event.target.value )
   }
   render() {
     const breeds = this.props.breeds;
-    breeds.map((breed) => {
-      console.log(breed.id)
-    })
+    
     const optionBreeds = breeds.map((breed) => 
-      <option key={breed.id}>{breed.name}</option>
+      <option value={breed.id}>{breed.name}</option>
     ) 
     return (
       <div>
