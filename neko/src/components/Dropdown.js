@@ -27,8 +27,8 @@ class Dropdown extends Component {
         <InputLabel htmlFor="grouped-native-select">Grouping</InputLabel>
         <Select onClick={this.handleBreed} native defaultValue="" input={<Input id="grouped-native-select" />}>
           <optgroup label="Category 1">
-            <option value="abys">Option 1</option>
-            <option value="2">Option 2</option>
+            <option value="abys">Abyssianian</option>
+            <option value="aege">Aegean</option>
           </optgroup>
         </Select>
       </FormControl>

@@ -1,4 +1,4 @@
-import React, {Component}from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import Home from './components/Home'
@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   getCatsImages() {
-    fetch("https://api.thecatapi.com/v1/images/search?breed_id=abys")
+    fetch("https://api.thecatapi.com/v1/images/search?breed_id=aege")
       .then(response => response.json())
       .then(result => this.setState({ catsImages: result }))
       .then(result => console.log(this.state.catsImages))
@@ -36,7 +36,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Home />
+        <Home
+          cats={this.state.catsImages}
+        />
         {/* <Cats
           cats={this.state.cats}
           catsImages={this.state.catsImages} /> */}
