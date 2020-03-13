@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Cats from './components/Cats'
 
+import NavBar from './components/NavBar';
+
 import './App.css';
 
 class App extends Component {
@@ -36,9 +38,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Cats
+        <NavBar />
+        {/* <Cats
           cats={this.state.cats}
-          catsImages={this.state.catsImages} />
+          catsImages={this.state.catsImages} /> */}
       </div>
     );
   };
