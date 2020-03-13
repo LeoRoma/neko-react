@@ -18,6 +18,7 @@ class Home extends Component {
         <Navbar />
         <Frame
           cats={this.props.cats}
+          getBreed={this.props.getBreed.bind(this)}
         />
       </div>
     )

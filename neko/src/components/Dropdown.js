@@ -17,6 +17,7 @@ class Dropdown extends Component {
 
   handleBreed = event => {
     this.setState({ breed: event.target.value })
+    this.props.getBreed(this.state.breed)
   }
   render() {
 

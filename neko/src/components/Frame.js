@@ -13,11 +13,12 @@ class Frame extends Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <Dropdown />
+        <Dropdown
+          getBreed={this.props.getBreed.bind(this)} />
         <Container fixed>
           <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '50vh' }}>
-            <Cats 
-            cats={this.props.cats}
+            <Cats
+              cats={this.props.cats}
             />
           </Typography>
 

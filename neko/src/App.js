@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       breeds: [],
+      breed:'',
       cats: []
     }
   };
@@ -26,19 +27,28 @@ class App extends Component {
   };
 
   getCatsImages() {
-    fetch("https://api.thecatapi.com/v1/images/search?breed_id=aege")
+    fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${this.state.breed}`)
       .then(response => response.json())
       .then(result => this.setState({ cats: result }))
       .then(result => console.log(this.state.cats))
       .catch(err => console.log(err));
   };
 
+  getBreed (breed) {
+    this.setState({
+      breed: breed
+    })
+    console.log(this.state.breed)
+    console.log('hello')
+    window.location.reload(false);
+  }
   render() {
 
     return (
       <div className="App">
         <Home
           cats={this.state.cats}
+          getBreed={this.getBreed.bind(this)}
         />
         {/* <Cats
           cats={this.state.cats}
