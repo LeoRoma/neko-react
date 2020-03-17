@@ -8,12 +8,12 @@ import GridListTile from '@material-ui/core/GridListTile';
 
 class Categories extends Component {
   render() {
-    const categories = this.props.categories
-    console.log(categories)
+    const categoriesImg = this.props.categoriesImg
+    // console.log(categories)
     return (
       <div className>
         <GridList cellHeight={260} cols={3}>
-          {categories.map(tile => (
+          {categoriesImg.map(tile => (
             <GridListTile key={tile.id}>
               <img src={tile.url} />
             </GridListTile>

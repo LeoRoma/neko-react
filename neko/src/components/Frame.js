@@ -3,9 +3,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import DropdownBreeds from './DropdownBreeds';
-import Cats from './Cats';
 import Categories from './Categories';
+import Cats from './Cats';
+import DropdownBreeds from './DropdownBreeds';
+import DropdownCategories from './DropdownCategories';
+
 
 class Frame extends Component {
 
@@ -16,15 +18,20 @@ class Frame extends Component {
       <React.Fragment>
         <CssBaseline />
         <Container class="border border-dark" fixed>
+          <DropdownCategories
+            categories={this.props.categories}
+          />
           <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
             <DropdownBreeds
               getBreed={this.props.getBreed.bind(this)}
-              breeds={this.props.breeds} />
+              breeds={this.props.breeds}
+            />
+
             <Cats
               cats={this.props.cats}
             />
             <Categories
-              categories={this.props.categories}
+              categoriesImg={this.props.categoriesImg}
             />
           </Typography>
         </Container>

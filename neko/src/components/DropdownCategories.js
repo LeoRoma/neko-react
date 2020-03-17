@@ -16,10 +16,11 @@ class DropdownCategories extends Component {
     this.props.getCategory(event.target.value )
   }
   render() {
-    const breeds = this.props.breeds;
-    
-    const optionCategories = breeds.map((breed) => 
-      <option value={breed.id}>{breed.name}</option>
+    const categories = this.props.categories;
+    console.log(categories)
+    const optionCategories = categories.map((category) => 
+      <option value={category.id}>{category.name}</option>
+      // console.log(category.name)
     ) 
     return (
       <div>

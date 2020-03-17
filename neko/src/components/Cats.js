@@ -5,7 +5,7 @@ class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-    console.log(cats)
+    // console.log(cats)
     return (
       <div key={cats.id}>
         {
