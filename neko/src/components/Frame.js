@@ -20,6 +20,7 @@ class Frame extends Component {
         <Container class="border border-dark" fixed>
           <DropdownCategories
             categories={this.props.categories}
+            getCategoriesImg={this.props.getCategoriesImg.bind(this)}
           />
           <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
             <DropdownBreeds

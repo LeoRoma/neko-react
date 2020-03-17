@@ -13,8 +13,9 @@ class DropdownCategories extends Component {
   }
 
   handleCategory = event => {
-    this.props.getCategory(event.target.value )
-  }
+    this.props.getCategoriesImg(event.target.value )
+  };
+
   render() {
     const categories = this.props.categories;
     console.log(categories)

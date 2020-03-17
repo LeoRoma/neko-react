@@ -61,11 +61,12 @@ class App extends Component {
     return (
       <div className="App">
         <Home
-          cats={this.state.cats}
-          getBreed={this.getBreed.bind(this)}
           breeds={this.state.breeds}
           categories={this.state.categories}
           categoriesImg={this.state.categoriesImg}
+          cats={this.state.cats}
+          getBreed={this.getBreed.bind(this)}
+          getCategoriesImg={this.getCategoriesImg.bind(this)}
         />
       </div>
     );

@@ -12,16 +12,17 @@ class Home extends Component {
     }
   };
   render() {
-    
+
     return (
       <div>
         <Navbar />
         <Frame
-          cats={this.props.cats}
-          getBreed={this.props.getBreed.bind(this)}
           breeds={this.props.breeds}
+          cats={this.props.cats}
           categories={this.props.categories}
           categoriesImg={this.props.categoriesImg}
+          getBreed={this.props.getBreed.bind(this)}
+          getCategoriesImg={this.props.getCategoriesImg.bind(this)}
         />
         <Test />
       </div>
