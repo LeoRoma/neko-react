@@ -20,6 +20,7 @@ class Home extends Component {
           cats={this.props.cats}
           getBreed={this.props.getBreed.bind(this)}
           breeds={this.props.breeds}
+          categories={this.props.categories}
         />
         <Test />
       </div>

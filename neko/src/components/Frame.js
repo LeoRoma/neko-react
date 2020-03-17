@@ -4,22 +4,31 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 import Dropdown from './Dropdown';
-import Cats from './Cats'
+import Nav from './Nav';
+import Cats from './Cats';
+import Categories from './Categories';
 
 class Frame extends Component {
 
 
   render() {
+    
     return (
       <React.Fragment>
         <CssBaseline />
-        <Dropdown
-          getBreed={this.props.getBreed.bind(this)} 
-          breeds={this.props.breeds}/>
-        <Container fixed>
-          <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '50vh' }}>
+
+        <Container class="border border-dark" fixed>
+
+          <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '60vh' }}>
+            {/* <Nav /> */}
+            <Dropdown
+              getBreed={this.props.getBreed.bind(this)}
+              breeds={this.props.breeds} />
             <Cats
               cats={this.props.cats}
+            />
+            <Categories
+              categories={this.props.categories}
             />
           </Typography>
 

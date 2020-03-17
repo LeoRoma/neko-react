@@ -8,7 +8,8 @@ class App extends Component {
     super(props);
     this.state = {
       breeds: [],
-      breed:'',
+      breed: '',
+      categories: [],
       cats: []
     }
   };
@@ -16,9 +17,8 @@ class App extends Component {
   componentDidMount() {
     this.getCats()
     this.getBreed()
+    this.getCategories()
   };
-
-  
 
   getCats() {
     fetch("https://api.thecatapi.com/v1/breeds?1b5970e3-2ecc-4bb9-9d75-d8a644120226")
@@ -28,24 +28,23 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  // getCatsImages() {
-  //   fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${this.state.breed}`)
-  //     .then(response => response.json())
-  //     .then(result => this.setState({ cats: result }))
-  //     .then(result => console.log(this.state.cats))
-  //     .catch(err => console.log(err));
-  //     // window.location.reload(false);
-  // };
 
-  getBreed (breed) {
+  getBreed(breed) {
     let changeBreed = breed
-    console.log(changeBreed)
     fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${changeBreed}`)
-    .then(response => response.json())
-    .then(result => this.setState({ cats: result }))
-    .then(result => console.log(this.state.cats))
-    .catch(err => console.log(err));
+      .then(response => response.json())
+      .then(result => this.setState({ cats: result }))
+      .then(result => console.log(this.state.cats))
+      .catch(err => console.log(err));
     // window.location.reload(false);
+  }
+
+  getCategories() {
+    fetch(`https://api.thecatapi.com/v1/images/search?category_ids=1?limit=5&page=100`)
+      .then(response => response.json())
+      .then(result => this.setState({ categories: result }))
+      .then(result => console.log(this.state.categories))
+      .catch(err => console.log(err));
   }
   render() {
 
@@ -55,10 +54,8 @@ class App extends Component {
           cats={this.state.cats}
           getBreed={this.getBreed.bind(this)}
           breeds={this.state.breeds}
+          categories={this.state.categories}
         />
-        {/* <Cats
-          cats={this.state.cats}
-          catsImages={this.state.catsImages} /> */}
       </div>
     );
   };

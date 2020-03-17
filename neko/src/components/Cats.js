@@ -5,7 +5,7 @@ class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-
+    console.log(cats)
     return (
       <div key={cats.id}>
         {
@@ -22,13 +22,10 @@ class Cats extends Component {
                       wikipediaUrl={breed.wikipedia_url}
                       image={url}
                     />
-                  
+
                   </div>
                 )
               }
-              {/* <Cat 
-              image={url}
-              /> */}
             </div>
           ))
         }

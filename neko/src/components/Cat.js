@@ -7,6 +7,8 @@ import {
   MDBAnimation
 } from "mdbreact";
 
+import './Cat.css'
+
 class Cat extends Component {
 
   render() {
@@ -16,14 +18,14 @@ class Cat extends Component {
     const description = this.props.description;
     const wikipediaUrl = this.props.wikipediaUrl;
     const image = this.props.image
-
+    console.log(name)
     return (
       <div>
         <MDBView>
-          <MDBContainer>
+          <MDBContainer className="border border-dark">
             <MDBRow>
               <MDBCol className="black-text text-center text-md-left mt-xl-5 mb-5">
-                <MDBAnimation type="fadeInLeft" delay=".3s">
+                <MDBAnimation>
                   <h1 className="h1-responsive font-weight-bold mt-sm-5">
                     {name}
                   </h1>
@@ -40,22 +42,20 @@ class Cat extends Component {
                   <p><a href={wikipediaUrl}>More Details</a></p>
                 </MDBAnimation>
               </MDBCol>
-              <MDBCol md="5" xl="4" className="mt-xl-5">
-                <MDBAnimation type="fadeInRight" delay=".3s">
+              <MDBCol md="24" xl="5" className="mt-xl-5 mb-5">
+                <MDBAnimation>
                   <img
                     src={image}
                     alt=""
-                    className="img-fluid"
-                    width="480"
-                    height="320"
+                    className="card-img-top img-fluid mx-auto d-block"
+                    width="620"
+                    height="700"
                   />
                 </MDBAnimation>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-
         </MDBView>
-
       </div>
     )
   }
