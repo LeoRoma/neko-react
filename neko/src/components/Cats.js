@@ -20,13 +20,14 @@ class Cats extends Component {
               {
                 breeds.map((breed) =>
                   <div>
-                    <Cat 
-                    name={breed.name} />
-                    <h1>{breed.name}</h1>
-                    <h2>{breed.origin}</h2>
-                    <h3>{breed.temperament}</h3>
-                    <p>{breed.description}</p>
-                    <a href={breed.wikipedia_url}>More details</a>
+                    <Cat
+                      name={breed.name}
+                      origin={breed.origin}
+                      temperament={breed.temperament}
+                      description={breed.description}
+                      wikipediaUrl={breed.wikipedia_url}
+                    />
+                  
                   </div>
                 )
               }
