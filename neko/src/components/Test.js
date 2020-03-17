@@ -1,12 +1,4 @@
 import React, { Component } from 'react';
-import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBContainer,
-  MDBAnimation
-} from "mdbreact";
 
 class Test extends Component {
   constructor(props) {
@@ -38,6 +30,7 @@ class Test extends Component {
           <button>Search!</button>
         </form>
         <img src={this.state.img} height="200" alt={this.state.term} /> */}
+      
       </div >
     );
   }
