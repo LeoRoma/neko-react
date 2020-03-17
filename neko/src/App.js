@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   getCategories() {
-    fetch(`https://api.thecatapi.com/v1/images/search?category_ids=1?limit=5&page=100`)
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=100&page=5&category_ids=1`)
       .then(response => response.json())
       .then(result => this.setState({ categories: result }))
       .then(result => console.log(this.state.categories))
