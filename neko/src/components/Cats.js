@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Cat from './Cat';
 
 class Cats extends Component {
   constructor(props) {
@@ -20,6 +20,8 @@ class Cats extends Component {
               {
                 breeds.map((breed) =>
                   <div>
+                    <Cat 
+                    name={breed.name} />
                     <h1>{breed.name}</h1>
                     <h2>{breed.origin}</h2>
                     <h3>{breed.temperament}</h3>
@@ -32,6 +34,7 @@ class Cats extends Component {
             </div>
           ))
         }
+        <Cat />
       </div >
     )
 
