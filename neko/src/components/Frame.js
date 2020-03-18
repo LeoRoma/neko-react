@@ -7,7 +7,7 @@ import Categories from './Categories';
 import Cats from './Cats';
 import DropdownBreeds from './DropdownBreeds';
 import DropdownCategories from './DropdownCategories';
-
+import Tabs from './Tabs';
 
 class Frame extends Component {
 
@@ -34,6 +34,7 @@ class Frame extends Component {
             <Categories
               categoriesImg={this.props.categoriesImg}
             />
+            <Tabs />
           </Typography>
         </Container>
       </React.Fragment>
