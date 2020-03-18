@@ -8,6 +8,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+import DropdownBreeds from './DropdownBreeds';
+import DropdownCategories from './DropdownCategories';
+import Test from './Test';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -61,15 +65,18 @@ export default function CenteredTabs() {
         textColor="primary"
         centered
       >
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
+        <Tab label="Nekos" {...a11yProps(0)} />
+        <Tab label="Images" {...a11yProps(1)} />
         <Tab label="Item Three" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <Test />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        {/* <DropdownCategories
+          categories={this.props.categories}
+          getCategoriesImg={this.props.getCategoriesImg.bind(this)}
+        /> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
