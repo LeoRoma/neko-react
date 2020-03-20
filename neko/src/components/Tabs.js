@@ -18,8 +18,10 @@ class Tablas extends Component {
             />
           </Tab>
           <Tab eventKey="categories" title="Categories">
-            <CategoriesContainer 
-            
+            <CategoriesContainer
+              categories={this.props.categories}
+              categoriesImg={this.props.categoriesImg}
+              getCategoriesImg={this.props.getCategoriesImg.bind(this)}
             />
           </Tab>
           <Tab eventKey="more" title="More">
