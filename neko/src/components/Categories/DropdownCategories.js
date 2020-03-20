@@ -7,20 +7,19 @@ import Select from '@material-ui/core/Select';
 class DropdownCategories extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      category: '',
+      format: ''
+    }
   }
 
   handleCategory = event => {
     event.preventDefault()
-    let category = '';
-    let format = '';
-    if (event.target.name === "category"){
-      category += event.target.value
-      console.log(category)
-    }else{
-      format += event.target.value
-    }
-    // [event.target.name] = event.targe.value
-    this.props.getCategoriesImg(category, format)
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+    
+    this.props.getCategoriesImg(this.state.category, this.state.format)
   };
 
   render() {
@@ -51,6 +50,7 @@ class DropdownCategories extends Component {
               <Select name="format" onClick={this.handleCategory} native defaultValue="" input={<Input id="grouped-native-select" />}>
                 <optgroup label="Type">
                   <option value="gif">Animated</option>
+                  <option value="jpg">Static</option>
                 </optgroup>
               </Select>
             </FormControl>
