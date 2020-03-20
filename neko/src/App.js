@@ -36,7 +36,7 @@ class App extends Component {
     fetch("https://api.thecatapi.com/v1/categories")
       .then(response => response.json())
       .then(result => this.setState({ categories: result }))
-      .then(result => console.log(this.state.categories))
+      // .then(result => console.log(this.state.categories))
       .catch(err => console.log(err));
   };
 
@@ -50,9 +50,11 @@ class App extends Component {
     // window.location.reload(false);
   }
 
-  getCategoriesImg(category) {
+  getCategoriesImg(category, format) {
     let changeCategory = category
-    fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&category_ids=${changeCategory}`)
+    let changeFormat = format
+    console.log("cat ", changeCategory, "format ", changeFormat)
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&category_ids=${changeCategory}&mime_types=${changeFormat}`)
       .then(response => response.json())
       .then(result => this.setState({ categoriesImg: result }))
       .then(result => console.log(this.state.categoriesImg))

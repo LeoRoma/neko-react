@@ -7,9 +7,6 @@ import Select from '@material-ui/core/Select';
 class DropdownBreeds extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      breed: ''
-    }
   }
 
   handleBreed = event => {
@@ -33,7 +30,6 @@ class DropdownBreeds extends Component {
           </optgroup>
         </Select>
       </FormControl>
-      {this.state.breed}
       </div>
     )
   }

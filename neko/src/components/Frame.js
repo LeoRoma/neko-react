@@ -3,10 +3,10 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
-import Categories from './Categories';
-import Cats from './Cats';
-import DropdownBreeds from './DropdownBreeds';
-import DropdownCategories from './DropdownCategories';
+import Categories from './Categories/Categories';
+import Cats from './Breeds/Cats';
+import DropdownBreeds from './Breeds/DropdownBreeds';
+import DropdownCategories from './Categories/DropdownCategories';
 import Tabs from './Tabs';
 
 class Frame extends Component {
