@@ -13,7 +13,7 @@ class DropdownCategories extends Component {
     event.preventDefault()
     let category = '';
     let format = '';
-    if (event.target.name === category){
+    if (event.target.name === "category"){
       category += event.target.value
       console.log(category)
     }else{
