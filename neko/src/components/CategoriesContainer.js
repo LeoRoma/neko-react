@@ -14,3 +14,5 @@ class CategoriesContainer extends Component{
     )
   }
 }
+
+export default CategoriesContainer;
