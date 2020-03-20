@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
+import Tabs from './Tabs'
+
+// import Frame from './Frame'
 import Navbar from './Navbar';
-import Frame from './Frame'
+
 import Test from './Test'
 
 class Home extends Component {
@@ -16,7 +19,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
-        <Frame
+        <Tabs
           breeds={this.props.breeds}
           cats={this.props.cats}
           categories={this.props.categories}
@@ -24,6 +27,14 @@ class Home extends Component {
           getBreed={this.props.getBreed.bind(this)}
           getCategoriesImg={this.props.getCategoriesImg.bind(this)}
         />
+        {/* <Frame
+          breeds={this.props.breeds}
+          cats={this.props.cats}
+          categories={this.props.categories}
+          categoriesImg={this.props.categoriesImg}
+          getBreed={this.props.getBreed.bind(this)}
+          getCategoriesImg={this.props.getCategoriesImg.bind(this)}
+        /> */}
       </div>
     )
   };

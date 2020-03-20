@@ -1,14 +1,22 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class CatsContainer extends Component{
-  render(){
-    return(
+import Cats from './Cats';
+import DropdownBreeds from './DropdownBreeds';
+
+class CatsContainer extends Component {
+  render() {
+    return (
       <div className="container">
         <div className="row">
-          Dropdown
+          <DropdownBreeds
+            getBreed={this.props.getBreed.bind(this)}
+            breeds={this.props.breeds}
+          />
         </div>
         <div className="row">
-          cats
+          <Cats
+            cats={this.props.cats}
+          />
         </div>
       </div>
     )
