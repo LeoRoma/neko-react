@@ -50,6 +50,16 @@ class App extends Component {
     // window.location.reload(false);
   }
 
+  getBreedImg(breed) {
+    let changeBreed = breed
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&breed_id=${changeBreed}`)
+      .then(response => response.json())
+      .then(result => this.setState({ cats: result }))
+      .then(result => console.log(this.state.cats))
+      .catch(err => console.log(err));
+    // window.location.reload(false);
+  }
+
   getCategoriesImg(category, format) {
     let changeCategory = category
     let changeFormat = format
