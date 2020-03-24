@@ -5,10 +5,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 class DropdownBreeds extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   handleBreed = event => {
     this.props.getBreed(event.target.value )
   }

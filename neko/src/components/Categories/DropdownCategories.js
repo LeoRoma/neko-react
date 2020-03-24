@@ -5,9 +5,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 class DropdownCategories extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleCategory = event => {
     event.preventDefault()

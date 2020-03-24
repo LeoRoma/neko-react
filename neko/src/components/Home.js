@@ -5,7 +5,7 @@ import Tabs from './Tabs'
 // import Frame from './Frame'
 import Navbar from './Navbar';
 import Player from './Player';
-import Test from './Test'
+// import Test from './Test'
 
 class Home extends Component {
   constructor(props) {
