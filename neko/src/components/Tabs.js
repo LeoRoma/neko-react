@@ -22,6 +22,7 @@ class Tablas extends Component {
               breeds={this.props.breeds}
               categories={this.props.categories}
               categoriesImg={this.props.categoriesImg}
+              cats={this.props.cats}
               getBreedImg={this.props.getBreedImg.bind(this)}
               getCategoriesImg={this.props.getCategoriesImg.bind(this)}
             />

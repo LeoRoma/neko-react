@@ -25,6 +25,7 @@ class CategoriesContainer extends Component {
         <div className="row">
           <Categories
             categoriesImg={this.props.categoriesImg}
+            cats={this.props.cats}
           />
         </div>
       </div>
