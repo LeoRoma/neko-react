@@ -4,7 +4,7 @@ import Tabs from './Tabs'
 
 // import Frame from './Frame'
 import Navbar from './Navbar';
-
+import Player from './Player';
 import Test from './Test'
 
 class Home extends Component {
@@ -19,6 +19,7 @@ class Home extends Component {
     return (
       <div>
         <Navbar />
+
         <Tabs
           breeds={this.props.breeds}
           cats={this.props.cats}
@@ -28,6 +29,7 @@ class Home extends Component {
           getBreedImg={this.props.getBreedImg.bind(this)}
           getCategoriesImg={this.props.getCategoriesImg.bind(this)}
         />
+        <Player />
       </div>
     )
   };

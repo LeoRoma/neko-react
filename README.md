@@ -11,3 +11,4 @@
 - MDBoostrap
 - Material UI
 - react-bootstrap bootstrap
+- ReactPlayer
