@@ -80,6 +80,7 @@ class App extends Component {
           categoriesImg={this.state.categoriesImg}
           cats={this.state.cats}
           getBreed={this.getBreed.bind(this)}
+          getBreedImg={this.getBreedImg.bind(this)}
           getCategoriesImg={this.getCategoriesImg.bind(this)}
         />
       </div>

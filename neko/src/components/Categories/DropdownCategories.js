@@ -7,19 +7,11 @@ import Select from '@material-ui/core/Select';
 class DropdownCategories extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      category: '',
-      format: ''
-    }
   }
 
   handleCategory = event => {
     event.preventDefault()
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-    
-    this.props.getCategoriesImg(this.state.category, this.state.format)
+    this.props.getCategoriesImg(this.state.category)
   };
 
   render() {
@@ -29,34 +21,16 @@ class DropdownCategories extends Component {
     )
     return (
       <div>
-        <div className="row">
-          <div className="col">
-            <FormControl>
+        <FormControl>
 
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h6>Category</h6>
-              <Select name="category" onClick={this.handleCategory} native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Categories">
-                  {optionCategories}
-                </optgroup>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col">
-            <FormControl>
-
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h6>Type</h6>
-              <Select name="format" onClick={this.handleCategory} native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Type">
-                  <option value="gif">Animated</option>
-                  <option value="jpg">Static</option>
-                </optgroup>
-              </Select>
-            </FormControl>
-          </div>
-        </div>
-
+          <InputLabel htmlFor="grouped-native-select"></InputLabel>
+          <h6>Category</h6>
+          <Select name="category" onClick={this.handleCategory} native defaultValue="" input={<Input id="grouped-native-select" />}>
+            <optgroup label="Categories">
+              {optionCategories}
+            </optgroup>
+          </Select>
+        </FormControl>
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Categories from './Categories';
 import DropdownCategories from './DropdownCategories';
-import DropdownFormat from './DropdownFormat'
+import DropdownBreedImg from './DropdownBreedImg'
 
 class CategoriesContainer extends Component {
   render() {
