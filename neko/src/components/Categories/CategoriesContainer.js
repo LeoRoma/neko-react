@@ -15,12 +15,12 @@ class CategoriesContainer extends Component {
               getCategoriesImg={this.props.getCategoriesImg.bind(this)}
             />
           </div>
-          {/* <div className="col">
-            <DropdownFormat
-              // categories={this.props.categories}
-              getCategoriesImg={this.props.getCategoriesImg.bind(this)}
+          <div className="col">
+            <DropdownBreedImg
+              breeds={this.props.breeds}
+              getBreedImg={this.props.getBreedImg.bind(this)}
             />
-          </div> */}
+          </div>
         </div>
         <div className="row">
           <Categories
