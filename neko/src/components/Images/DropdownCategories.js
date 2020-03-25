@@ -7,7 +7,6 @@ import Select from '@material-ui/core/Select';
 class DropdownCategories extends Component {
 
   handleCategory = event => {
-    event.preventDefault()
     this.props.getCategoriesImg(event.target.value)
   };
 

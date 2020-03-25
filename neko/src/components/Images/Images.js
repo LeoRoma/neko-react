@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
-
-
-class Categories extends Component {
+class Images extends Component {
   render() {
     const categoriesImg = this.props.categoriesImg
     const cats = this.props.cats
@@ -31,4 +29,4 @@ class Categories extends Component {
   }
 }
 
-export default Categories;
+export default Images;

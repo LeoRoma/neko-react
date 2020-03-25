@@ -64,7 +64,7 @@ class App extends Component {
     let changeCategory = category
     let changeFormat = format
     console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&category_ids=${changeCategory}&mime_types=${changeFormat}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=18&page=18&category_ids=${changeCategory}&mime_types=${changeFormat}`)
       .then(response => response.json())
       .then(result => this.setState({ categoriesImg: result }))
       .then(result => console.log(this.state.categoriesImg))

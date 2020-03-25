@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Categories from './Categories';
+import Images from './Images';
 import DropdownCategories from './DropdownCategories';
 import DropdownBreedImg from './DropdownBreedImg'
 
@@ -23,7 +23,7 @@ class CategoriesContainer extends Component {
           </div>
         </div>
         <div className="row">
-          <Categories
+          <Images
             categoriesImg={this.props.categoriesImg}
             cats={this.props.cats}
           />
