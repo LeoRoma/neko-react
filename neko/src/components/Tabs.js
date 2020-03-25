@@ -4,7 +4,7 @@ import { Tabs, Tab } from 'react-bootstrap';
 
 import CatsContainer from './Breeds/CatsContainer';
 import ImagesTabs from './Images/ImagesTabs'
-import ImagesContainer from './Images/ImagesContainer';
+
 
 class Tablas extends Component {
   render() {
