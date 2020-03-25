@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
 
 import CatsContainer from './Breeds/CatsContainer';
+import ImagesTabs from './Images/ImagesTabs'
 import ImagesContainer from './Images/ImagesContainer';
 
 class Tablas extends Component {
@@ -18,7 +19,7 @@ class Tablas extends Component {
             />
           </Tab>
           <Tab eventKey="categories" title="Images">
-            <ImagesContainer
+            <ImagesTabs
               breeds={this.props.breeds}
               categories={this.props.categories}
               categoriesImg={this.props.categoriesImg}
@@ -26,6 +27,14 @@ class Tablas extends Component {
               getBreedImg={this.props.getBreedImg.bind(this)}
               getCategoriesImg={this.props.getCategoriesImg.bind(this)}
             />
+            {/* <ImagesContainer
+              breeds={this.props.breeds}
+              categories={this.props.categories}
+              categoriesImg={this.props.categoriesImg}
+              cats={this.props.cats}
+              getBreedImg={this.props.getBreedImg.bind(this)}
+              getCategoriesImg={this.props.getCategoriesImg.bind(this)}
+            /> */}
           </Tab>
           <Tab eventKey="more" title="More">
             More
