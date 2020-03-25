@@ -8,7 +8,7 @@ class DropdownCategories extends Component {
 
   handleCategory = event => {
     event.preventDefault()
-    this.props.getCategoriesImg(this.state.category)
+    this.props.getCategoriesImg(event.target.value)
   };
 
   render() {
