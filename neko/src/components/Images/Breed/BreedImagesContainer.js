@@ -16,7 +16,7 @@ class BreedImagesContainer extends Component {
         </div>
         <div className="row">
           <BreedImages
-            cats={this.props.cats}
+            catsImg={this.props.catsImg}
           />
         </div>
       </div>

@@ -23,6 +23,7 @@ class Home extends Component {
         <Tabs
           breeds={this.props.breeds}
           cats={this.props.cats}
+          catsImg={this.props.catsImg}
           categories={this.props.categories}
           categoriesImg={this.props.categoriesImg}
           getBreed={this.props.getBreed.bind(this)}

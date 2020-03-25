@@ -22,7 +22,7 @@ class ImagesTabs extends Component {
             <BreedImagesContainer
               breeds={this.props.breeds}
               getBreedImg={this.props.getBreedImg.bind(this)}
-              cats={this.props.cats}
+              catsImg={this.props.catsImg}
             />
           </Tab>
         </Tabs>

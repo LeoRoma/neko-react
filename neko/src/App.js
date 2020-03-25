@@ -10,10 +10,10 @@ class App extends Component {
     super(props);
     this.state = {
       breeds: [],
-      breed: '',
       categories: [],
       categoriesImg: [],
-      cats: []
+      cats: [],
+      catsImg: []
     }
   };
 
@@ -54,8 +54,8 @@ class App extends Component {
     let changeBreed = breed
     fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&breed_id=${changeBreed}`)
       .then(response => response.json())
-      .then(result => this.setState({ cats: result }))
-      .then(result => console.log(this.state.cats))
+      .then(result => this.setState({ catsImg: result }))
+      .then(result => console.log(this.state.catsImg))
       .catch(err => console.log(err));
     // window.location.reload(false);
   }
@@ -64,7 +64,7 @@ class App extends Component {
     let changeCategory = category
     let changeFormat = format
     console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?limit=18&page=18&category_ids=${changeCategory}&mime_types=${changeFormat}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&category_ids=${changeCategory}`)
       .then(response => response.json())
       .then(result => this.setState({ categoriesImg: result }))
       .then(result => console.log(this.state.categoriesImg))
@@ -79,6 +79,7 @@ class App extends Component {
           categories={this.state.categories}
           categoriesImg={this.state.categoriesImg}
           cats={this.state.cats}
+          catsImg={this.state.catsImg}
           getBreed={this.getBreed.bind(this)}
           getBreedImg={this.getBreedImg.bind(this)}
           getCategoriesImg={this.getCategoriesImg.bind(this)}
