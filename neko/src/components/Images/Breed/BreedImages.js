@@ -5,7 +5,6 @@ import GridListTile from '@material-ui/core/GridListTile';
 
 class BreedImages extends Component {
   render() {
-    const categoriesImg = this.props.categoriesImg
     const catsImg = this.props.catsImg
 
     return (
