@@ -17,6 +17,7 @@ class ImagesContainer extends Component {
             <DropdownImages
               breeds={this.props.breeds}
               categories={this.props.categories}
+              getImages={this.props.getImages}
               getBreedImg={this.props.getBreedImg.bind(this)}
               getCategoriesImg={this.props.getCategoriesImg}
             />

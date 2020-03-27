@@ -26,6 +26,8 @@ class Home extends Component {
           catsImg={this.props.catsImg}
           categories={this.props.categories}
           categoriesImg={this.props.categoriesImg}
+          getImages={this.props.getImages.bind(this)}
+
           getBreed={this.props.getBreed.bind(this)}
           getBreedImg={this.props.getBreedImg.bind(this)}
           getCategoriesImg={this.props.getCategoriesImg.bind(this)}
