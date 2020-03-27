@@ -13,7 +13,7 @@ class App extends Component {
       categories: [],
       categoriesImg: [],
       cats: [],
-      catsImg: []
+      images: []
     }
   };
 
@@ -71,15 +71,16 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  getImages(selector, category) {
+  getImages(selector, breed, category) {
     let changeSelector = selector;
     let changeCategory = category;
+    let changeBreed = breed
     // let changeFormat = format;
     // console.log("cat ", changeCategory, "format ", changeFormat)
     fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&${changeSelector}_ids=${changeCategory}`)
       .then(response => response.json())
-      .then(result => this.setState({ categoriesImg: result }))
-      .then(result => console.log(this.state.categoriesImg))
+      .then(result => this.setState({ images: result }))
+      .then(result => console.log(this.state.images))
       .catch(err => console.log(err));
   }
 
@@ -93,6 +94,7 @@ class App extends Component {
           cats={this.state.cats}
           catsImg={this.state.catsImg}
           getImages={this.getImages.bind(this)}
+      images={this.state.images}
 
           getBreed={this.getBreed.bind(this)}
           getBreedImg={this.getBreedImg.bind(this)}

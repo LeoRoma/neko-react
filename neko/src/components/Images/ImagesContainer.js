@@ -32,6 +32,8 @@ class ImagesContainer extends Component {
         </div>
         <div className="row">
           <CategoryImages
+          images={this.props.images}
+
             categoriesImg={this.props.categoriesImg}
             cats={this.props.cats}
           />

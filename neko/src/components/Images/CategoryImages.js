@@ -5,12 +5,12 @@ import GridListTile from '@material-ui/core/GridListTile';
 
 class CategoryImages extends Component {
   render() {
-    const categoriesImg = this.props.categoriesImg
+    const images = this.props.images
 
     return (
       <div className>
         <GridList cellHeight={260} cols={3}>
-          {categoriesImg.map(tile => (
+          {images.map(tile => (
             <GridListTile key={tile.id}>
               <img src={tile.url} />
             </GridListTile>

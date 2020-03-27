@@ -25,7 +25,11 @@ class DropdownBreedImg extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('hello')
+    let selector = this.state.selector;
+    let breed = this.state.breed;
+    let category = this.state.category;
+    console.log(selector, breed, category)
+    this.props.getImages(selector, breed, category)
   }
   render() {
     const breeds = this.props.breeds;
