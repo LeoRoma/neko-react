@@ -10,8 +10,7 @@ class DropdownBreedImg extends Component {
     super(props);
     this.state = {
       selector: '',
-      breed: '',
-      category: ''
+      imageId: ''
     }
   }
 
@@ -26,11 +25,10 @@ class DropdownBreedImg extends Component {
   handleSubmit = event => {
     event.preventDefault();
     let selector = this.state.selector;
-    let breed = this.state.breed;
-    let category = this.state.category;
-    console.log(selector, breed, category)
-    this.props.getImages(selector, breed, category)
-  }
+    let imageId = this.state.imageId;
+    this.props.getImages(selector, imageId);
+  };
+
   render() {
     const breeds = this.props.breeds;
 
@@ -61,7 +59,7 @@ class DropdownBreedImg extends Component {
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
               <h2>Select a breed</h2>
-              <Select onClick={this.handleImage} name="breed" native defaultValue="" input={<Input id="grouped-native-select" />}>
+              <Select onClick={this.handleImage} name="imageId" native defaultValue="" input={<Input id="grouped-native-select" />}>
                 <optgroup label="Breeds">
                   {optionBreeds}
                 </optgroup>
@@ -72,7 +70,7 @@ class DropdownBreedImg extends Component {
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
               <h2>Category</h2>
-              <Select name="category" name="category" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+              <Select name="category" name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
                 <optgroup label="Categories">
                   {optionCategories}
                 </optgroup>

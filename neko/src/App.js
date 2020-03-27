@@ -71,13 +71,13 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  getImages(selector, breed, category) {
+  getImages(selector, imageId) {
     let changeSelector = selector;
-    let changeCategory = category;
-    let changeBreed = breed
+    let changeImageId = imageId;
+   
     // let changeFormat = format;
     // console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&${changeSelector}_ids=${changeCategory}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&${changeSelector}_ids=${changeImageId}`)
       .then(response => response.json())
       .then(result => this.setState({ images: result }))
       .then(result => console.log(this.state.images))
