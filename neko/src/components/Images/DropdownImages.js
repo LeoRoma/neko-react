@@ -10,7 +10,8 @@ class DropdownBreedImg extends Component {
     super(props);
     this.state = {
       selector: '',
-      imageId: ''
+      imageId: '',
+      hideDropdow: false
     }
   }
 
@@ -18,8 +19,6 @@ class DropdownBreedImg extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
-    // this.props.getBreedImg(event.target.value)
-    console.log(this.state)
   };
 
   handleSubmit = event => {

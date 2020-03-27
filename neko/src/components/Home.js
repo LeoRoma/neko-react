@@ -23,14 +23,10 @@ class Home extends Component {
         <Tabs
           breeds={this.props.breeds}
           cats={this.props.cats}
-          catsImg={this.props.catsImg}
           categories={this.props.categories}
-          categoriesImg={this.props.categoriesImg}
           getImages={this.props.getImages.bind(this)}
-images={this.props.images}
           getBreed={this.props.getBreed.bind(this)}
-          getBreedImg={this.props.getBreedImg.bind(this)}
-          getCategoriesImg={this.props.getCategoriesImg.bind(this)}
+          images={this.props.images}
         />
         {/* <Player /> */}
       </div>

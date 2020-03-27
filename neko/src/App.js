@@ -74,7 +74,7 @@ class App extends Component {
   getImages(selector, imageId) {
     let changeSelector = selector;
     let changeImageId = imageId;
-   
+
     // let changeFormat = format;
     // console.log("cat ", changeCategory, "format ", changeFormat)
     fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&${changeSelector}_ids=${changeImageId}`)
@@ -90,15 +90,10 @@ class App extends Component {
         <Home
           breeds={this.state.breeds}
           categories={this.state.categories}
-          categoriesImg={this.state.categoriesImg}
           cats={this.state.cats}
-          catsImg={this.state.catsImg}
           getImages={this.getImages.bind(this)}
-      images={this.state.images}
-
           getBreed={this.getBreed.bind(this)}
-          getBreedImg={this.getBreedImg.bind(this)}
-          getCategoriesImg={this.getCategoriesImg.bind(this)}
+          images={this.state.images}
         />
       </div>
     );
