@@ -70,8 +70,19 @@ class App extends Component {
       .then(result => console.log(this.state.categoriesImg))
       .catch(err => console.log(err));
   }
-  render() {
 
+  getImages(category, format) {
+    let changeCategory = category
+    let changeFormat = format
+    console.log("cat ", changeCategory, "format ", changeFormat)
+    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&category_ids=${changeCategory}`)
+      .then(response => response.json())
+      .then(result => this.setState({ categoriesImg: result }))
+      .then(result => console.log(this.state.categoriesImg))
+      .catch(err => console.log(err));
+  }
+
+  render() {
     return (
       <div className="App">
         <Home
@@ -80,6 +91,8 @@ class App extends Component {
           categoriesImg={this.state.categoriesImg}
           cats={this.state.cats}
           catsImg={this.state.catsImg}
+          getImages={this.getImages.bind(this)}
+
           getBreed={this.getBreed.bind(this)}
           getBreedImg={this.getBreedImg.bind(this)}
           getCategoriesImg={this.getCategoriesImg.bind(this)}

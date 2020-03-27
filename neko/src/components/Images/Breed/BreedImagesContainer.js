@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import BreedImages from './BreedImages';
-import DropdownBreedImg from './DropdownBreedImg';
+import DropdownBreedImg from '../DropdownBreedImg';
+// import Pagination from './Pagination'
 
 
 class BreedImagesContainer extends Component {
@@ -19,6 +20,7 @@ class BreedImagesContainer extends Component {
             catsImg={this.props.catsImg}
           />
         </div>
+        {/* <Pagination /> */}
       </div>
     )
   }
