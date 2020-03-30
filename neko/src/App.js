@@ -53,7 +53,7 @@ class App extends Component {
     let changeImageId = imageId;
     let changeType = type;
     // console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&order=DESC&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=45&page=45&order=DESC&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
       .then(response => response.json())
       .then(result => this.setState({ images: result }))
       .then(result => console.log(this.state.images))

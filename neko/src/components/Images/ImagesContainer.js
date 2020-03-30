@@ -11,20 +11,28 @@ class ImagesContainer extends Component {
       currentPage: 1,
       setCurrentPage: 1,
       imagesPerPage: 9,
-      setImagesPerPage: 9
     }
   };
+
+  //Change page
+
+  getCurrentPage(pageNumber) {
+    this.setState({
+      currentPage: pageNumber
+    })
+  };
+
   render() {
     // For the pagination 
 
     const indexOfLastImage = this.state.currentPage * this.state.imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - this.state.imagesPerPage;
     const currentImages = this.props.images.slice(indexOfFirstImage, indexOfLastImage)
-    
+
     // Images 
 
-    const images = this.props.images
-    
+    const images = this.props.images;
+
     return (
       <div className="container">
         <div className="row">
@@ -40,9 +48,10 @@ class ImagesContainer extends Component {
           <Images
             images={currentImages}
           />
-          <ImagesPagination 
+          <ImagesPagination
             imagesPerPage={this.state.imagesPerPage}
             totalImages={images.length}
+            paginate={this.getCurrentPage.bind(this)}
           />
         </div>
         {/* <Pagination /> */}

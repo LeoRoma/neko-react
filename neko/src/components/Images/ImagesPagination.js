@@ -16,7 +16,7 @@ class ImagesPagination extends Component {
         <ul className="pagination">
           {pageNumbers.map(number => (
             <li key={number} className="page-item">
-              <a href="!#" className="page-link">
+              <a onClick={() => this.props.paginate(number)} href="!#" className="page-link">
                 {number}
               </a>
             </li>

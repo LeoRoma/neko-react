@@ -31,14 +31,12 @@ class DropdownBreedImg extends Component {
         dropdownBreedActive: true,
         dropdownCategoryActive: false
       })
-      console.log('breed')
     };
     if (event.target.value === "category") {
       this.setState({
         dropdownCategoryActive: true,
         dropdownBreedActive: false
       })
-      console.log('category')
     }
   };
 
