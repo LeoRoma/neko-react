@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       breeds: [],
       categories: [],
-      categoriesImg: [],
       cats: [],
       images: []
     }
@@ -21,7 +20,6 @@ class App extends Component {
     this.getCats()
     this.getBreed()
     this.getCategory()
-    this.getCategoriesImg()
   };
 
   getCats() {
@@ -48,40 +46,19 @@ class App extends Component {
       .then(result => console.log(this.state.cats))
       .catch(err => console.log(err));
     // window.location.reload(false);
-  }
-
-  getBreedImg(breed) {
-    let changeBreed = breed
-    fetch(`https://api.thecatapi.com/v1/images/search?limit=9&page=9&breed_id=${changeBreed}`)
-      .then(response => response.json())
-      .then(result => this.setState({ catsImg: result }))
-      .then(result => console.log(this.state.catsImg))
-      .catch(err => console.log(err));
-    // window.location.reload(false);
-  }
-
-  getCategoriesImg(category, format) {
-    let changeCategory = category
-    let changeFormat = format
-    console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&category_ids=${changeCategory}`)
-      .then(response => response.json())
-      .then(result => this.setState({ categoriesImg: result }))
-      .then(result => console.log(this.state.categoriesImg))
-      .catch(err => console.log(err));
-  }
+  };
 
   getImages(selector, imageId, type) {
     let changeSelector = selector;
     let changeImageId = imageId;
     let changeType = type;
     // console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=18&page=18&order=DESC&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
       .then(response => response.json())
       .then(result => this.setState({ images: result }))
       .then(result => console.log(this.state.images))
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     return (

@@ -94,6 +94,7 @@ class DropdownBreedImg extends Component {
             <h2>Type</h2>
             <Select name="category" name="type" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
               <optgroup label="Type">
+                <option value="">All</option>
                 <option value="jpg">Static</option>
                 <option value="gif">Animated</option>
               </optgroup>
@@ -108,9 +109,9 @@ class DropdownBreedImg extends Component {
           <div className="col">
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h2>Select type of images</h2>
+              <h2>Images</h2>
               <Select onClick={this.handleImage} name="selector" native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Breeds">
+                <optgroup label="Images">
                   <option value="breed">Breed</option>
                   <option value="category">Category</option>
                 </optgroup>
@@ -120,7 +121,7 @@ class DropdownBreedImg extends Component {
           {this.state.dropdownBreedActive ? dropdownBreed : null}
           {this.state.dropdownCategoryActive ? dropdownCategory : null}
           <div className="col">
-            <Button onClick={this.handleSubmit.bind(this)}>Submit</Button>
+            <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
         </div>
 

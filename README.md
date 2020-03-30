@@ -2,8 +2,8 @@
 
 ## Description
 - Website built using the ```thecatapi```.
-- The website is able to gain information of the cat breed.
-- Still is underconstruction.
+- The website is able to give information of each cat's breed.
+- Is possible to see images of cats by category, type and breed.
 
 ## Instructions
 - Open your terminal.
