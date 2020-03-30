@@ -11,6 +11,7 @@ class DropdownBreedImg extends Component {
     this.state = {
       selector: '',
       imageId: '',
+      type: '',
       dropdownCategoryActive: false,
       dropdwonBreedActive: false
     }
@@ -19,7 +20,8 @@ class DropdownBreedImg extends Component {
   handleImage = event => {
     this.setState({
       [event.target.name]: event.target.value
-    })
+    });
+    console.log(this.state)
     this.dropdownActivator(event);
   };
 
@@ -43,8 +45,9 @@ class DropdownBreedImg extends Component {
   handleSubmit = event => {
     let selector = this.state.selector;
     let imageId = this.state.imageId;
+    let type = this.state.type;
     event.preventDefault();
-    this.props.getImages(selector, imageId);
+    this.props.getImages(selector, imageId, type);
   };
 
   render() {
@@ -88,16 +91,17 @@ class DropdownBreedImg extends Component {
         <div className="col">
           <FormControl>
             <InputLabel htmlFor="grouped-native-select"></InputLabel>
-            <h2>Category</h2>
-            <Select name="category" name="category" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
-              <optgroup label="Categories">
-                {optionCategories}
+            <h2>Type</h2>
+            <Select name="category" name="type" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+              <optgroup label="Type">
+                <option value="jpg">Static</option>
+                <option value="gif">Animated</option>
               </optgroup>
             </Select>
           </FormControl>
         </div>
       </div>
-    
+
     return (
       <div>
         <div className="row">
