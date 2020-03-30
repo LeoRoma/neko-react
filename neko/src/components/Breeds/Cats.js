@@ -7,13 +7,13 @@ class Cats extends Component {
     const cats = this.props.cats;
     // console.log(cats)
     return (
-      <div key={cats.id}>
+      <div>
         {
           cats.map(({ url, breeds }) => (
             <div>
               {
                 breeds.map((breed) =>
-                  <div>
+                  <div key={breed.id}>
                     <Cat
                       name={breed.name}
                       origin={breed.origin}

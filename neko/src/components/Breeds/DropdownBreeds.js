@@ -11,7 +11,6 @@ class DropdownBreeds extends Component {
   }
   render() {
     const breeds = this.props.breeds;
-    
     const optionBreeds = breeds.map((breed) => 
       <option value={breed.id}>{breed.name}</option>
     ) 

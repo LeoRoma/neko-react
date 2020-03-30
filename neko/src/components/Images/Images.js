@@ -8,7 +8,7 @@ class CategoryImages extends Component {
     const images = this.props.images
 
     return (
-      <div className>
+      <div>
         <GridList cellHeight={260} cols={3}>
           {images.map(tile => (
             <GridListTile key={tile.id}>
