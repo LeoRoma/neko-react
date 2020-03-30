@@ -81,7 +81,7 @@ class DropdownBreedImg extends Component {
           <FormControl key={categories.id}>
             <InputLabel htmlFor="grouped-native-select"></InputLabel>
             <h2>Category</h2>
-            <Select name="category" name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+            <Select name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
               <optgroup label="Categories">
                 {optionCategories}
               </optgroup>
@@ -92,7 +92,7 @@ class DropdownBreedImg extends Component {
           <FormControl>
             <InputLabel htmlFor="grouped-native-select"></InputLabel>
             <h2>Type</h2>
-            <Select name="category" name="type" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+            <Select name="type" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
               <optgroup label="Type">
                 <option value="">All</option>
                 <option value="jpg">Static</option>

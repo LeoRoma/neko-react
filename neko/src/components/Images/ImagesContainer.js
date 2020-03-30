@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import DropdownImages from './DropdownImages';
 import Images from './Images';
+import ImagesPagination from './ImagesPagination';
 
 class ImagesContainer extends Component {
   constructor(props) {
@@ -14,11 +15,16 @@ class ImagesContainer extends Component {
     }
   };
   render() {
+    // For the pagination 
+
     const indexOfLastImage = this.state.currentPage * this.state.imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - this.state.imagesPerPage;
     const currentImages = this.props.images.slice(indexOfFirstImage, indexOfLastImage)
-    // 
-    console.log(currentImages)
+    
+    // Images 
+
+    const images = this.props.images
+    
     return (
       <div className="container">
         <div className="row">
@@ -33,6 +39,10 @@ class ImagesContainer extends Component {
         <div className="row">
           <Images
             images={currentImages}
+          />
+          <ImagesPagination 
+            imagesPerPage={this.state.imagesPerPage}
+            totalImages={images.length}
           />
         </div>
         {/* <Pagination /> */}
