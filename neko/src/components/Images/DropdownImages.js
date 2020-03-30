@@ -26,9 +26,17 @@ class DropdownBreedImg extends Component {
   dropdownActivator(event) {
     if (event.target.value === "breed") {
       this.setState({
-        dropdownBreedActive: true
+        dropdownBreedActive: true,
+        dropdownCategoryActive: false
       })
       console.log('breed')
+    };
+    if (event.target.value === "category") {
+      this.setState({
+        dropdownCategoryActive: true,
+        dropdownBreedActive: false
+      })
+      console.log('category')
     }
   };
 
@@ -64,6 +72,32 @@ class DropdownBreedImg extends Component {
         </FormControl>
       </div>
 
+    const dropdownCategory =
+      <div className="row">
+        <div className="col">
+          <FormControl>
+            <InputLabel htmlFor="grouped-native-select"></InputLabel>
+            <h2>Category</h2>
+            <Select name="category" name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+              <optgroup label="Categories">
+                {optionCategories}
+              </optgroup>
+            </Select>
+          </FormControl>
+        </div>
+        <div className="col">
+          <FormControl>
+            <InputLabel htmlFor="grouped-native-select"></InputLabel>
+            <h2>Category</h2>
+            <Select name="category" name="category" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
+              <optgroup label="Categories">
+                {optionCategories}
+              </optgroup>
+            </Select>
+          </FormControl>
+        </div>
+      </div>
+    
     return (
       <div>
         <div className="row">
@@ -80,28 +114,7 @@ class DropdownBreedImg extends Component {
             </FormControl>
           </div>
           {this.state.dropdownBreedActive ? dropdownBreed : null}
-          <div className="col">
-            <FormControl>
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h2>Category</h2>
-              <Select name="category" name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Categories">
-                  {optionCategories}
-                </optgroup>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col">
-            <FormControl>
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h2>Category</h2>
-              <Select name="category" name="category" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Categories">
-                  {optionCategories}
-                </optgroup>
-              </Select>
-            </FormControl>
-          </div>
+          {this.state.dropdownCategoryActive ? dropdownCategory : null}
           <div className="col">
             <Button onClick={this.handleSubmit.bind(this)}>Submit</Button>
           </div>
