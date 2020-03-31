@@ -61,7 +61,7 @@ class DropdownBreedImg extends Component {
     );
 
     const dropdownBreed =
-      <div className="col">
+      <div className="col-sm">
         <FormControl key={breeds.id}>
           <InputLabel htmlFor="grouped-native-select"></InputLabel>
           <h2>Select a breed</h2>
@@ -75,7 +75,7 @@ class DropdownBreedImg extends Component {
 
     const dropdownCategory =
       <div className="row">
-        <div className="col">
+        <div className="col-sm">
           <FormControl key={categories.id}>
             <InputLabel htmlFor="grouped-native-select"></InputLabel>
             <h2>Category</h2>
@@ -86,7 +86,7 @@ class DropdownBreedImg extends Component {
             </Select>
           </FormControl>
         </div>
-        <div className="col">
+        <div className="col-sm">
           <FormControl>
             <InputLabel htmlFor="grouped-native-select"></InputLabel>
             <h2>Type</h2>
@@ -104,7 +104,7 @@ class DropdownBreedImg extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col">
+          <div className="col-sm">
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
               <h2>Images</h2>

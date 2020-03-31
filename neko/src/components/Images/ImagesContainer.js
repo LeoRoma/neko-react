@@ -34,7 +34,7 @@ class ImagesContainer extends Component {
     const images = this.props.images;
 
     return (
-      <div className="container">
+      <div className="images-container">
         <div className="row">
           <div className="col">
             <DropdownImages
@@ -44,7 +44,7 @@ class ImagesContainer extends Component {
             />
           </div>
         </div>
-        <div className="row">
+        <div className="row images-container">
           <Images
             images={currentImages}
           />
@@ -54,7 +54,6 @@ class ImagesContainer extends Component {
             paginate={this.getCurrentPage.bind(this)}
           />
         </div>
-        {/* <Pagination /> */}
       </div>
     )
   }
