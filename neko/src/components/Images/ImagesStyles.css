@@ -1,4 +1,8 @@
 .images-container{
   border-color: black;
   border-style: groove;
+  margin: auto;
+  width: 100%;
+  border: 3px solid #73AD21;
+  padding: 10px;
  }

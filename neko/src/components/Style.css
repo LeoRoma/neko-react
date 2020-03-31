@@ -1,16 +1,20 @@
-/* .container {
-  background-color: chartreuse;
-  border-style: dotted;
-  margin-top: 50px;
-} */
+.tabs-container {
+  margin: auto;
+  width: 80%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  margin-top: 40px;
+}
 
-.tabs-container{
-  background-color: red;
-  /* margin-top: 50px; */
-  /* width: 1200px; */
+.tabs{
+  background-color: black;
+  margin: auto;
+  width: 100%;
+  border: 3px solid #73AD21;
+  padding: 10px;
 
 }
 
-.tab-container{
+.tab{
   background-color: chocolate;
 }

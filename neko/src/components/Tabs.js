@@ -10,16 +10,16 @@ import './Style.css';
 class Tablas extends Component {
   render() {
     return (
-      <div className="container">
-        <Tabs className="tabs-container" defaultActiveKey="breeds" id="uncontrolled-tab-example">
-          <Tab className="tab-container" eventKey="breeds" title="Breeds">
+      <div className="tabs-container">
+        <Tabs className="tabs" defaultActiveKey="breeds" id="uncontrolled-tab-example">
+          <Tab className="tab" eventKey="breeds" title="Breeds">
             <CatsContainer
               cats={this.props.cats}
               getBreed={this.props.getBreed.bind(this)}
               breeds={this.props.breeds}
             />
           </Tab>
-          <Tab className="tab-container" eventKey="categories" title="Images">
+          <Tab className="tab" eventKey="categories" title="Images">
             <ImagesContainer
               breeds={this.props.breeds}
               categories={this.props.categories}
