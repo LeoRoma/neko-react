@@ -67,6 +67,7 @@ class DropdownBreedImg extends Component {
           <h2>Select a breed</h2>
           <Select onClick={this.handleImage} name="imageId" native defaultValue="" input={<Input id="grouped-native-select" />}>
             <optgroup label="Breeds">
+              <option value="">None</option>
               {optionBreeds}
             </optgroup>
           </Select>
@@ -81,6 +82,7 @@ class DropdownBreedImg extends Component {
             <h2>Category</h2>
             <Select name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
               <optgroup label="Categories">
+                <option value="">none</option>
                 {optionCategories}
               </optgroup>
             </Select>
@@ -110,6 +112,7 @@ class DropdownBreedImg extends Component {
               <h2>Images</h2>
               <Select onClick={this.handleImage} name="selector" native defaultValue="" input={<Input id="grouped-native-select" />}>
                 <optgroup label="Images">
+                  <option value="">None</option>
                   <option value="breed">Breed</option>
                   <option value="category">Category</option>
                 </optgroup>
