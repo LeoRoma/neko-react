@@ -19,6 +19,7 @@ class Cats extends Component {
                       origin={breed.origin}
                       temperament={breed.temperament}
                       description={breed.description}
+                      lifeSpan={breed.life_span}
                       wikipediaUrl={breed.wikipedia_url}
                       image={url}
                     />

@@ -16,6 +16,7 @@ class Cat extends Component {
     const origin = this.props.origin;
     const temperament = this.props.temperament;
     const description = this.props.description;
+    const lifeSpan = this.props.lifeSpan;
     const wikipediaUrl = this.props.wikipediaUrl;
     const image = this.props.image
     console.log(name)
@@ -33,6 +34,9 @@ class Cat extends Component {
                   <h2>
                     {origin}
                   </h2>
+                  <h6>
+                    {lifeSpan} average life span
+                  </h6>
                   <h6 className="mb-10">
                     {temperament}
                   </h6>
