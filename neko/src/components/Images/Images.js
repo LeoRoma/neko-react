@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
-import './ImagesStyles.css';
-
 class CategoryImages extends Component {
   render() {
     const images = this.props.images

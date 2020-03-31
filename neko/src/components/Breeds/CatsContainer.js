@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Cats from './Cats';
 import DropdownBreeds from './DropdownBreeds';
 
-import './Cat.css';
+// import './Cat.css';
 
 class CatsContainer extends Component {
   render() {

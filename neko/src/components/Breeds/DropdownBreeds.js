@@ -4,8 +4,6 @@ import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-import './Cat.css';
-
 class DropdownBreeds extends Component {
 
   handleBreed = event => {

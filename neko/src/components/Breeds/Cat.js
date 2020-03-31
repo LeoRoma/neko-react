@@ -7,7 +7,7 @@ import {
   MDBAnimation
 } from "mdbreact";
 
-import './Cat.css'
+// import './Cat.css'
 
 class Cat extends Component {
 
