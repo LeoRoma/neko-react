@@ -1,4 +1,16 @@
-.container {
+/* .container {
   background-color: chartreuse;
+  border-style: dotted;
   margin-top: 50px;
+} */
+
+.tabs-container{
+  background-color: red;
+  /* margin-top: 50px; */
+  /* width: 1200px; */
+
+}
+
+.tab-container{
+  background-color: chocolate;
 }

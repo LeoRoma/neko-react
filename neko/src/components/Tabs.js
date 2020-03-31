@@ -11,25 +11,22 @@ class Tablas extends Component {
   render() {
     return (
       <div className="container">
-        <Tabs defaultActiveKey="breeds" id="uncontrolled-tab-example">
-          <Tab eventKey="breeds" title="Breeds">
+        <Tabs className="tabs-container" defaultActiveKey="breeds" id="uncontrolled-tab-example">
+          <Tab className="tab-container" eventKey="breeds" title="Breeds">
             <CatsContainer
               cats={this.props.cats}
               getBreed={this.props.getBreed.bind(this)}
               breeds={this.props.breeds}
             />
           </Tab>
-          <Tab eventKey="categories" title="Images">
+          <Tab className="tab-container" eventKey="categories" title="Images">
             <ImagesContainer
               breeds={this.props.breeds}
               categories={this.props.categories}
-            
               cats={this.props.cats}
-              
               getImages={this.props.getImages.bind(this)}
               images={this.props.images}
-              
-           />
+            />
           </Tab>
           <Tab eventKey="more" title="More">
             More
