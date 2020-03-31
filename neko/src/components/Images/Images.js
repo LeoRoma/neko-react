@@ -11,7 +11,7 @@ class CategoryImages extends Component {
       <div className="grid-container">
         <GridList className="grid-list" cellHeight={420} cols={3}>
           {images.map(tile => (
-            <GridListTile key={tile.id}>
+            <GridListTile key={tile.id} className="thumbnail">
               <img src={tile.url} alt="nekos"/>
             </GridListTile>
           ))}
