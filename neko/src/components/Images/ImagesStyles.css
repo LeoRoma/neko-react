@@ -1,8 +1,35 @@
 .images-container{
-  border-color: black;
+  /* border-color: black; */
   border-style: groove;
   margin: auto;
   width: 100%;
-  border: 3px solid #73AD21;
+  /* border: 3px solid #73AD21; */
   padding: 10px;
  }
+
+.grid-container{
+  /* border-color: black; */
+  /* border-style: groove; */
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  /* border: 3px solid #73AD21; */
+  /* padding: 10px; */
+ }
+
+ .grid-list {
+  width: 600
+}
+
+.container{
+  /* border-color: black; */
+  /* border-style: groove;  */
+  width: 100%;
+}
+
+.row-container{
+  margin-top: 50px;
+  /* border-color: black;  */
+  width: 100%;
+  margin: auto;
+}

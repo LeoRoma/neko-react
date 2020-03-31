@@ -10,8 +10,8 @@ class CategoryImages extends Component {
     const images = this.props.images
 
     return (
-      <div className="container">
-        <GridList cellHeight={320} cols={3}>
+      <div className="grid-container">
+        <GridList className="grid-list" cellHeight={420} cols={3}>
           {images.map(tile => (
             <GridListTile key={tile.id}>
               <img src={tile.url} alt="nekos"/>

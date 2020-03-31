@@ -44,12 +44,12 @@ class ImagesContainer extends Component {
             />
           </div>
         </div>
-        <div className="row images-container">
+        <div className="row row-container">
           <Images
             images={currentImages}
           />
         </div>
-        <div className="row">
+        <div className="row row-container">
           <ImagesPagination
             imagesPerPage={this.state.imagesPerPage}
             totalImages={images.length}
