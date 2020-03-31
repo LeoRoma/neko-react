@@ -22,9 +22,9 @@ class Cat extends Component {
     return (
       <div>
         <MDBView>
-          <MDBContainer className="border border-dark">
+          <MDBContainer className="border border-dark cat-container">
             <MDBRow>
-              <MDBCol className="black-text text-center text-md-left mt-xl-5 mb-5">
+              <MDBCol className="black-text text-center text-md-left mt-xl-10 mb-10">
                 <MDBAnimation>
                   <h1 className="h1-responsive font-weight-bold mt-sm-5">
                     {name}

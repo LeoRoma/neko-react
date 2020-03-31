@@ -24,7 +24,7 @@ class Test extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="images-container">
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
           <button>Search!</button>

@@ -5,6 +5,7 @@ import { Tabs, Tab } from 'react-bootstrap';
 import CatsContainer from './Breeds/CatsContainer';
 import ImagesContainer from './Images/ImagesContainer';
 
+
 import './Style.css';
 
 class Tablas extends Component {
