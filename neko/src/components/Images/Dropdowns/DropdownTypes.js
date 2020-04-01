@@ -8,7 +8,7 @@ import Select from '@material-ui/core/Select';
 const DropdownTypes = ({handleDropdowns}) => {
 
   const handleDropdown = event => {
-    {handleDropdowns(event)}
+    handleDropdowns(event)
   };
   
     return (

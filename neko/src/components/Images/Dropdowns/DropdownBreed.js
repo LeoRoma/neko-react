@@ -6,13 +6,13 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 const DropdownBreed = ({ breeds, handleDropdowns }) => {
-  
+
   const optionBreeds = breeds.map((breed) =>
     <option value={breed.id}>{breed.name}</option>
   );
 
   const handleDropdown = event => {
-    { handleDropdowns(event) }
+    handleDropdowns(event)
   };
 
   return (

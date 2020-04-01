@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 
-
-import DropdownTypes from './Dropdowns/DropdownTypes';
 import DropdownBreed from './Dropdowns/DropdownBreed';
+import DropdownCategory from './Dropdowns/DropdownCategory';
+import DropdownTypes from './Dropdowns/DropdownTypes';
 
 class DropdownBreedImg extends Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class DropdownBreedImg extends Component {
   };
 
   handleDropdowns = event => {
-    console.log(event.target.name, "name", event.target.value, 'value')
     this.setState({
       [event.target.name]: event.target.value
     });
+    console.log(this.state)
     this.dropdownActivator(event);
   };
 
@@ -53,30 +54,11 @@ class DropdownBreedImg extends Component {
   };
 
   render() {
-    const breeds = this.props.breeds;
     const categories = this.props.categories;
-
-    const optionBreeds = breeds.map((breed) =>
-      <option value={breed.id}>{breed.name}</option>
-    );
 
     const optionCategories = categories.map((category) =>
       <option value={category.id}>{category.name}</option>
     );
-
-    const dropdownBreed =
-      <div className="col-sm">
-        <FormControl key={breeds.id}>
-          <InputLabel htmlFor="grouped-native-select"></InputLabel>
-          <h2>Select a breed</h2>
-          <Select onClick={this.handleImage} name="imageId" native defaultValue="" input={<Input id="grouped-native-select" />}>
-            <optgroup label="Breeds">
-              <option value="">None</option>
-              {optionBreeds}
-            </optgroup>
-          </Select>
-        </FormControl>
-      </div>
 
     const dropdownCategory =
       <div className="row">
@@ -108,33 +90,38 @@ class DropdownBreedImg extends Component {
       </div>
 
     return (
-
-      <div className="row">
-        {/* <div className="col-sm">
-           
-          </div>
-          {this.state.dropdownBreedActive ? dropdownBreed : null}
-          {this.state.dropdownCategoryActive ? dropdownCategory : null}
+      <div>
+        <div className="row">
           <div className="col">
-            <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
-          </div>
-        </div> */}
-        <div className="col">
-          <DropdownTypes
-            handleDropdowns={this.handleDropdowns.bind(this)}
-          />
-          <div className="col">
-            <DropdownBreed
+            <DropdownTypes
               handleDropdowns={this.handleDropdowns.bind(this)}
-              breeds={this.props.breeds}
             />
           </div>
           <div className="col">
-            <div className="col">
-              <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
-            </div>
+            {
+              this.state.dropdownBreedActive ?
+                <DropdownBreed
+                  handleDropdowns={this.handleDropdowns.bind(this)}
+                  breeds={this.props.breeds}
+                /> : null
+            }
+          </div>
+
+          <div className="col">
+            {
+              this.state.dropdownCategoryActive ? <DropdownCategory
+                handleDropdowns={this.handleDropdowns.bind(this)}
+                categories={this.props.categories}
+              />
+                : null
+            }
+          </div>
+
+          <div className="col">
+            <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
         </div>
+
       </div>
     )
   }
