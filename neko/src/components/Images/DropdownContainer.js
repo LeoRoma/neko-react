@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 
 import DropdownBreed from './Dropdowns/DropdownBreed';
 import DropdownCategory from './Dropdowns/DropdownCategory';
+import DropdownFormat from './Dropdowns/DropdownFormat';
 import DropdownTypes from './Dropdowns/DropdownTypes';
 
 class DropdownBreedImg extends Component {
@@ -54,40 +51,6 @@ class DropdownBreedImg extends Component {
   };
 
   render() {
-    const categories = this.props.categories;
-
-    const optionCategories = categories.map((category) =>
-      <option value={category.id}>{category.name}</option>
-    );
-
-    const dropdownCategory =
-      <div className="row">
-        <div className="col-sm">
-          <FormControl key={categories.id}>
-            <InputLabel htmlFor="grouped-native-select"></InputLabel>
-            <h2>Category</h2>
-            <Select name="imageId" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
-              <optgroup label="Categories">
-                <option value="">none</option>
-                {optionCategories}
-              </optgroup>
-            </Select>
-          </FormControl>
-        </div>
-        <div className="col-sm">
-          <FormControl>
-            <InputLabel htmlFor="grouped-native-select"></InputLabel>
-            <h2>Type</h2>
-            <Select name="type" onClick={this.handleImage} native defaultValue="" input={<Input id="grouped-native-select" />}>
-              <optgroup label="Type">
-                <option value="">All</option>
-                <option value="jpg">Static</option>
-                <option value="gif">Animated</option>
-              </optgroup>
-            </Select>
-          </FormControl>
-        </div>
-      </div>
 
     return (
       <div>
@@ -117,6 +80,11 @@ class DropdownBreedImg extends Component {
             }
           </div>
 
+          <div className="col">
+            <DropdownFormat
+              handleDropdowns={this.handleDropdowns.bind(this)}
+            />
+          </div>
           <div className="col">
             <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
