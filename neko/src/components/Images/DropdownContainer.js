@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 
 
 import DropdownTypes from './Dropdowns/DropdownTypes';
+import DropdownBreed from './Dropdowns/DropdownBreed';
 
 class DropdownBreedImg extends Component {
   constructor(props) {
@@ -107,20 +108,10 @@ class DropdownBreedImg extends Component {
       </div>
 
     return (
-     
-        <div className="row">
-          {/* <div className="col-sm">
-            <FormControl>
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h2>Images</h2>
-              <Select onClick={this.handleImage} name="selector" native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Images">
-                  <option value="">None</option>
-                  <option value="breed">Breed</option>
-                  <option value="category">Category</option>
-                </optgroup>
-              </Select>
-            </FormControl>
+
+      <div className="row">
+        {/* <div className="col-sm">
+           
           </div>
           {this.state.dropdownBreedActive ? dropdownBreed : null}
           {this.state.dropdownCategoryActive ? dropdownCategory : null}
@@ -128,12 +119,23 @@ class DropdownBreedImg extends Component {
             <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
         </div> */}
+        <div className="col">
+          <DropdownTypes
+            handleDropdowns={this.handleDropdowns.bind(this)}
+          />
           <div className="col">
-            <DropdownTypes
+            <DropdownBreed
               handleDropdowns={this.handleDropdowns.bind(this)}
+              breeds={this.props.breeds}
             />
           </div>
+          <div className="col">
+            <div className="col">
+              <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
+            </div>
+          </div>
         </div>
+      </div>
     )
   }
 };
