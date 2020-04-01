@@ -14,7 +14,7 @@ const DropdownTypes = ({handleDropdowns}) => {
     return (
       <FormControl>
         <InputLabel htmlFor="grouped-native-select"></InputLabel>
-        <h2>Images</h2>
+        <h7>Images</h7>
         <Select onClick={handleDropdown} name="selector" native defaultValue="" input={<Input id="grouped-native-select" />}>
           <optgroup label="Images">
             <option value="">None</option>

@@ -68,6 +68,7 @@ class DropdownBreedImg extends Component {
       <DropdownFormat
         handleDropdowns={this.handleDropdowns.bind(this)}
       />
+
     return (
       <div>
         <div className="row">
@@ -79,7 +80,8 @@ class DropdownBreedImg extends Component {
           <div className="col">
             {this.state.dropdownBreedActive ? dropdwonBreed : null}
           </div>
-
+        </div>
+        <div className="row">
           <div className="col">
             {this.state.dropdownCategoryActive ? dropdownCategory : null}
           </div>
@@ -87,12 +89,12 @@ class DropdownBreedImg extends Component {
           <div className="col">
             {this.state.dropdownCategoryActive ? dropdownFormat : null}
           </div>
-
-          <div className="col">
-            <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
-          </div>
         </div>
 
+
+        <div className="col">
+          <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
+        </div>
       </div>
     )
   }

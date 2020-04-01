@@ -20,7 +20,7 @@ class DropdownBreeds extends Component {
           <div className="col-sm">
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h2>Select a breed</h2>
+              <h7>Select a breed</h7>
               <Select onClick={this.handleBreed} native defaultValue="" input={<Input id="grouped-native-select" />}>
                 <optgroup label="Breeds">
                   {optionBreeds}
