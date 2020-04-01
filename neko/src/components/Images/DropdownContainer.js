@@ -52,6 +52,22 @@ class DropdownBreedImg extends Component {
 
   render() {
 
+    const dropdwonBreed =
+      <DropdownBreed
+        handleDropdowns={this.handleDropdowns.bind(this)}
+        breeds={this.props.breeds}
+      />
+
+    const dropdownCategory =
+      <DropdownCategory
+        handleDropdowns={this.handleDropdowns.bind(this)}
+        categories={this.props.categories}
+      />
+
+    const dropdownFormat =
+      <DropdownFormat
+        handleDropdowns={this.handleDropdowns.bind(this)}
+      />
     return (
       <div>
         <div className="row">
@@ -61,30 +77,17 @@ class DropdownBreedImg extends Component {
             />
           </div>
           <div className="col">
-            {
-              this.state.dropdownBreedActive ?
-                <DropdownBreed
-                  handleDropdowns={this.handleDropdowns.bind(this)}
-                  breeds={this.props.breeds}
-                /> : null
-            }
+            {this.state.dropdownBreedActive ? dropdwonBreed : null}
           </div>
 
           <div className="col">
-            {
-              this.state.dropdownCategoryActive ? <DropdownCategory
-                handleDropdowns={this.handleDropdowns.bind(this)}
-                categories={this.props.categories}
-              />
-                : null
-            }
+            {this.state.dropdownCategoryActive ? dropdownCategory : null}
           </div>
 
           <div className="col">
-            <DropdownFormat
-              handleDropdowns={this.handleDropdowns.bind(this)}
-            />
+            {this.state.dropdownCategoryActive ? dropdownFormat : null}
           </div>
+
           <div className="col">
             <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
