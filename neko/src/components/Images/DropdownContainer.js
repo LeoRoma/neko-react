@@ -5,6 +5,9 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 
+
+import DropdownTypes from './Dropdowns/DropdownTypes';
+
 class DropdownBreedImg extends Component {
   constructor(props) {
     super(props);
@@ -17,11 +20,11 @@ class DropdownBreedImg extends Component {
     }
   };
 
-  handleImage = event => {
+  handleDropdowns = event => {
+    console.log(event.target.name, "name", event.target.value, 'value')
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log(this.state)
     this.dropdownActivator(event);
   };
 
@@ -104,9 +107,9 @@ class DropdownBreedImg extends Component {
       </div>
 
     return (
-      <div>
+     
         <div className="row">
-          <div className="col-sm">
+          {/* <div className="col-sm">
             <FormControl>
               <InputLabel htmlFor="grouped-native-select"></InputLabel>
               <h2>Images</h2>
@@ -124,9 +127,13 @@ class DropdownBreedImg extends Component {
           <div className="col">
             <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
           </div>
+        </div> */}
+          <div className="col">
+            <DropdownTypes
+              handleDropdowns={this.handleDropdowns.bind(this)}
+            />
+          </div>
         </div>
-
-      </div>
     )
   }
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import DropdownImages from './DropdownImages';
+import DropdownContainer from './DropdownContainer';
 import Images from './Images';
 import ImagesPagination from './ImagesPagination';
 
@@ -37,7 +37,7 @@ class ImagesContainer extends Component {
       <div className="images-container">
         <div className="row">
           <div className="col">
-            <DropdownImages
+            <DropdownContainer
               breeds={this.props.breeds}
               categories={this.props.categories}
               getImages={this.props.getImages}
