@@ -13,9 +13,7 @@
   border: 1px solid;
 }
 
-.tab {
-  border: 1px solid;
-}
+
 .images-container{
   /* border-color: black; */
   border-style: groove;
@@ -86,7 +84,7 @@ margin-top: auto;
   border-style: groove;
 } */
 
-.dropdown{
-  width: 100%;
+.cat-container{
   border-style: groove;
+  margin-bottom: 25px;
 }

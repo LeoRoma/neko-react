@@ -12,10 +12,10 @@ class Cat extends Component {
     const wikipediaUrl = this.props.wikipediaUrl;
     
     return (
-      <div className="container">
+      <div className="container cat-container">
         <div className="row">
           <div className="col cat-col">
-            <h1 className="h1-responsive font-weight-bold mt-sm-5">
+            <h1>
               {name}
             </h1>
             <hr className="hr-light" />
