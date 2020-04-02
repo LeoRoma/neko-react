@@ -6,7 +6,7 @@ class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-    console.log("cats", this.props.catsImg.length)
+  
     return (
       <div className="cats-container">
         {
@@ -22,7 +22,6 @@ class Cats extends Component {
                       description={breed.description}
                       lifeSpan={breed.life_span}
                       wikipediaUrl={breed.wikipedia_url}
-                      image={url}
                       catsImg={this.props.catsImg}
                     />
 

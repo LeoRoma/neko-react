@@ -70,7 +70,7 @@ class App extends Component {
   };
 
   render() {
-    console.log("app", this.state.catsImg.length)
+    
     return (
       <div className="App">
         <Home

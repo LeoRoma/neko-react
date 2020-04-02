@@ -10,8 +10,7 @@ class Cat extends Component {
     const description = this.props.description;
     const lifeSpan = this.props.lifeSpan;
     const wikipediaUrl = this.props.wikipediaUrl;
-    const image = this.props.image
-    console.log("cat", this.props.catsImg.length)
+    
     return (
       <div className="container">
         <div className="row">
