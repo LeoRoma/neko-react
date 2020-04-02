@@ -11,7 +11,7 @@ class Cat extends Component {
     const lifeSpan = this.props.lifeSpan;
     const wikipediaUrl = this.props.wikipediaUrl;
     const image = this.props.image
-
+    console.log("cat", this.props.catsImg.length)
     return (
       <div className="container">
         <div className="row">
@@ -34,11 +34,13 @@ class Cat extends Component {
             </p>
             <p><a href={wikipediaUrl}>More Details</a></p>
           </div>
+
           <div className="col">
             <Carousel
               catsImg={this.props.catsImg}
             />
           </div>
+          
         </div>
       </div>
     )

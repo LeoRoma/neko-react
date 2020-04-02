@@ -6,9 +6,9 @@ class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-  
+    console.log("cats", this.props.catsImg.length)
     return (
-      <div>
+      <div className="cats-container">
         {
           cats.map(({ url, breeds }) => (
             <div>

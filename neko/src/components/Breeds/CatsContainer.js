@@ -10,7 +10,7 @@ class CatsContainer extends Component {
     return (
       <div className="images-container">
         <div className="row">
-          <div className="col">
+          <div className="col dropdown-cats">
             <DropdownBreeds
               getBreed={this.props.getBreed.bind(this)}
               getBreedImg={this.props.getBreedImg.bind(this)}
@@ -18,7 +18,7 @@ class CatsContainer extends Component {
             />
           </div>
         </div>
-        <div className="row row-container">
+        <div className="row cats-container-row">
           <Cats
             cats={this.props.cats}
             catsImg={this.props.catsImg}

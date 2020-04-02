@@ -40,7 +40,6 @@ class App extends Component {
   };
 
   getBreed(breed) {
-    console.log(breed)
     let changeBreed = breed
     fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${changeBreed}`)
       .then(response => response.json())
@@ -51,21 +50,18 @@ class App extends Component {
   };
 
   getBreedImg(breed) {
-    console.log(breed)
     let changeBreed = breed
     fetch(`https://api.thecatapi.com/v1/images/search?limit=8&page=8&breed_id=${changeBreed}`)
       .then(response => response.json())
       .then(result => this.setState({ catsImg: result }))
       .then(result => console.log(this.state.catsImg))
       .catch(err => console.log(err));
-    // window.location.reload(false);
   };
 
   getImages(selector, imageId, type) {
     let changeSelector = selector;
     let changeImageId = imageId;
     let changeType = type;
-    // console.log("cat ", changeCategory, "format ", changeFormat)
     fetch(`https://api.thecatapi.com/v1/images/search?limit=45&page=45&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
       .then(response => response.json())
       .then(result => this.setState({ images: result }))
@@ -74,6 +70,7 @@ class App extends Component {
   };
 
   render() {
+    console.log("app", this.state.catsImg.length)
     return (
       <div className="App">
         <Home
