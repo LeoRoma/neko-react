@@ -15,7 +15,7 @@ class Home extends Component {
     }
   };
   render() {
-    console.log(this.props.catsImg)
+  
     return (
       <div>
         <Navbar />

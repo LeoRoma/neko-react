@@ -6,7 +6,7 @@ class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-    console.log(this.props.catsImg)
+  
     return (
       <div>
         {

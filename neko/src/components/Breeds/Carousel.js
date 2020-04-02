@@ -1,19 +1,17 @@
 
 import React from "react";
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
-"mdbreact";
+  "mdbreact";
+  import GridListTile from '@material-ui/core/GridListTile';
 
-const CarouselPage = ({catsImg}) => {
-
-  console.log(catsImg)
-  const catImg = catsImg.map((catImg)=>{
-    console.log(catImg.url)
-  })
+const CarouselPage = ({ catsImg }) => {
+  catsImg.forEach((cat, index) => {console.log(cat, index)})
+ 
   return (
     <MDBContainer>
-      <MDBCarousel
+      {/* <MDBCarousel
         activeItem={1}
-        length={3}
+        length={catsImg.length}
         showControls={true}
         showIndicators={true}
         className="z-depth-1"
@@ -23,31 +21,18 @@ const CarouselPage = ({catsImg}) => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                src={catImg}
                 alt="First slide"
               />
             </MDBView>
           </MDBCarouselItem>
-          <MDBCarouselItem itemId="2">
-            <MDBView>
-              <img
-                className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
-                alt="Second slide"
-              />
-            </MDBView>
-          </MDBCarouselItem>
-          <MDBCarouselItem itemId="3">
-            <MDBView>
-              <img
-                className="d-block w-100"
-                src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
-                alt="Third slide"
-              />
-            </MDBView>
-          </MDBCarouselItem>
         </MDBCarouselInner>
-      </MDBCarousel>
+      </MDBCarousel> */}
+      {catsImg.map(tile => (
+        <GridListTile key={tile.id} className="thumbnail">
+          <img src={tile.url} alt="nekos" />
+        </GridListTile>
+      ))}
     </MDBContainer>
   );
 }
