@@ -11,7 +11,7 @@ class Cat extends Component {
     const lifeSpan = this.props.lifeSpan;
     const wikipediaUrl = this.props.wikipediaUrl;
     const image = this.props.image
- 
+
     return (
       <div className="container">
         <div className="row">
@@ -35,14 +35,7 @@ class Cat extends Component {
             <p><a href={wikipediaUrl}>More Details</a></p>
           </div>
           <div className="col">
-            <img
-              src={image}
-              alt=""
-              className="card-img-top img-fluid mx-auto d-block"
-              width="620"
-              height="700"
-            />
-            <Carousel 
+            <Carousel
               catsImg={this.props.catsImg}
             />
           </div>
