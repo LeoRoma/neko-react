@@ -16,7 +16,9 @@ class Tablas extends Component {
           <Tab className="tab" eventKey="breeds" title="Breeds">
             <CatsContainer
               cats={this.props.cats}
+              catsImg={this.props.catsImg}
               getBreed={this.props.getBreed.bind(this)}
+              getBreedImg={this.props.getBreedImg.bind(this)}
               breeds={this.props.breeds}
             />
           </Tab>

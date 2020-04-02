@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Cat from './Cat';
 
+
 class Cats extends Component {
 
   render() {
     const cats = this.props.cats;
-    // console.log(cats)
+    console.log(this.props.catsImg)
     return (
       <div>
         {
@@ -22,6 +23,7 @@ class Cats extends Component {
                       lifeSpan={breed.life_span}
                       wikipediaUrl={breed.wikipedia_url}
                       image={url}
+                      catsImg={this.props.catsImg}
                     />
 
                   </div>

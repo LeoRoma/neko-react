@@ -8,7 +8,14 @@ class DropdownBreeds extends Component {
 
   handleBreed = event => {
     this.props.getBreed(event.target.value)
-  }
+    // this.handleBreedImg(event)
+    this.props.getBreedImg(event.target.value) 
+  };
+
+  // handleBreedImg = event => {
+  //   console.log(event.target.value)
+  //   this.props.getBreedImg(event.target.value)  
+  // }
   render() {
     const breeds = this.props.breeds;
     const optionBreeds = breeds.map((breed) =>

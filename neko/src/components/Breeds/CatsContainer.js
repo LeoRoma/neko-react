@@ -13,6 +13,7 @@ class CatsContainer extends Component {
           <div className="col">
             <DropdownBreeds
               getBreed={this.props.getBreed.bind(this)}
+              getBreedImg={this.props.getBreedImg.bind(this)}
               breeds={this.props.breeds}
             />
           </div>
@@ -20,6 +21,7 @@ class CatsContainer extends Component {
         <div className="row row-container">
           <Cats
             cats={this.props.cats}
+            catsImg={this.props.catsImg}
           />
         </div>
       </div>

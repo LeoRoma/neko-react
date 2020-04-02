@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-  MDBRow,
-  MDBCol,
-  MDBView,
-  MDBContainer,
-  MDBAnimation
-} from "mdbreact";
-
-// import './Cat.css'
+import Carousel from './Carousel'
 
 class Cat extends Component {
 
@@ -19,47 +11,42 @@ class Cat extends Component {
     const lifeSpan = this.props.lifeSpan;
     const wikipediaUrl = this.props.wikipediaUrl;
     const image = this.props.image
-    console.log(name)
+ 
     return (
-      <div>
-        <MDBView>
-          <MDBContainer className="border border-dark cat-container">
-            <MDBRow>
-              <MDBCol className="black-text text-center text-md-left mt-xl-10 mb-10">
-                <MDBAnimation>
-                  <h1 className="h1-responsive font-weight-bold mt-sm-5">
-                    {name}
-                  </h1>
-                  <hr className="hr-light" />
-                  <h2>
-                    {origin}
-                  </h2>
-                  <h6>
-                    {lifeSpan} average life span
+      <div className="container">
+        <div className="row">
+          <div className="col black-text text-center text-md-left mt-xl-10 mb-10">
+            <h1 className="h1-responsive font-weight-bold mt-sm-5">
+              {name}
+            </h1>
+            <hr className="hr-light" />
+            <h2>
+              {origin}
+            </h2>
+            <h6 className="mb-10">
+              {temperament}
+            </h6>
+            <h6>
+              {lifeSpan} average life span
                   </h6>
-                  <h6 className="mb-10">
-                    {temperament}
-                  </h6>
-                  <p>
-                    {description}
-                  </p>
-                  <p><a href={wikipediaUrl}>More Details</a></p>
-                </MDBAnimation>
-              </MDBCol>
-              <MDBCol md="24" xl="5" className="mt-xl-5 mb-5">
-                <MDBAnimation>
-                  <img
-                    src={image}
-                    alt=""
-                    className="card-img-top img-fluid mx-auto d-block"
-                    width="620"
-                    height="700"
-                  />
-                </MDBAnimation>
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
-        </MDBView>
+            <p>
+              {description}
+            </p>
+            <p><a href={wikipediaUrl}>More Details</a></p>
+          </div>
+          <div className="col">
+            <img
+              src={image}
+              alt=""
+              className="card-img-top img-fluid mx-auto d-block"
+              width="620"
+              height="700"
+            />
+            <Carousel 
+              catsImg={this.props.catsImg}
+            />
+          </div>
+        </div>
       </div>
     )
   }

@@ -15,7 +15,7 @@ class Home extends Component {
     }
   };
   render() {
-
+    console.log(this.props.catsImg)
     return (
       <div>
         <Navbar />
@@ -23,9 +23,11 @@ class Home extends Component {
         <Tabs
           breeds={this.props.breeds}
           cats={this.props.cats}
+          catsImg={this.props.catsImg}
           categories={this.props.categories}
           getImages={this.props.getImages.bind(this)}
           getBreed={this.props.getBreed.bind(this)}
+          getBreedImg={this.props.getBreedImg.bind(this)}
           images={this.props.images}
         />
         {/* <Player /> */}

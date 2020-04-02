@@ -12,6 +12,7 @@ class App extends Component {
       breeds: [],
       categories: [],
       cats: [],
+      catsImg: [],
       images: []
     }
   };
@@ -39,6 +40,7 @@ class App extends Component {
   };
 
   getBreed(breed) {
+    console.log(breed)
     let changeBreed = breed
     fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${changeBreed}`)
       .then(response => response.json())
@@ -48,12 +50,23 @@ class App extends Component {
     // window.location.reload(false);
   };
 
+  getBreedImg(breed) {
+    console.log(breed)
+    let changeBreed = breed
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=8&page=8&breed_id=${changeBreed}`)
+      .then(response => response.json())
+      .then(result => this.setState({ catsImg: result }))
+      .then(result => console.log(this.state.catsImg))
+      .catch(err => console.log(err));
+    // window.location.reload(false);
+  };
+
   getImages(selector, imageId, type) {
     let changeSelector = selector;
     let changeImageId = imageId;
     let changeType = type;
     // console.log("cat ", changeCategory, "format ", changeFormat)
-    fetch(`https://api.thecatapi.com/v1/images/search?order=ASC&limit=45&page=45&order=DESC&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
+    fetch(`https://api.thecatapi.com/v1/images/search?limit=45&page=45&mime_types=${changeType}&${changeSelector}_ids=${changeImageId}`)
       .then(response => response.json())
       .then(result => this.setState({ images: result }))
       .then(result => console.log(this.state.images))
@@ -67,8 +80,10 @@ class App extends Component {
           breeds={this.state.breeds}
           categories={this.state.categories}
           cats={this.state.cats}
+          catsImg={this.state.catsImg}
           getImages={this.getImages.bind(this)}
           getBreed={this.getBreed.bind(this)}
+          getBreedImg={this.getBreedImg.bind(this)}
           images={this.state.images}
         />
       </div>
