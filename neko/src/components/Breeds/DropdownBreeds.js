@@ -8,7 +8,7 @@ class DropdownBreeds extends Component {
 
   handleBreed = event => {
     this.props.getBreed(event.target.value);
-    this.props.getBreedImg(event.target.value); 
+    this.props.getBreedImg(event.target.value);
   };
 
   render() {
@@ -18,22 +18,20 @@ class DropdownBreeds extends Component {
     )
     return (
       <div>
-        <div className="row">
-          <div className="col-sm">
-            <FormControl>
-              <InputLabel htmlFor="grouped-native-select"></InputLabel>
-              <h7>Select a breed</h7>
-              <Select onClick={this.handleBreed} native defaultValue="" input={<Input id="grouped-native-select" />}>
-                <optgroup label="Breeds">
-                  {optionBreeds}
-                </optgroup>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col-sm">
-
-          </div>
-        </div>
+        <FormControl className="dropdown">
+          <InputLabel htmlFor="grouped-native-select"></InputLabel>
+          <h7>Select a breed</h7>
+          <Select
+            onClick={this.handleBreed}
+            native defaultValue=""
+            input={<Input id="grouped-native-select" />}
+            style={{ width: "1050px" }}
+          >
+            <optgroup label="Breeds">
+              {optionBreeds}
+            </optgroup>
+          </Select>
+        </FormControl>
       </div>
     )
   }

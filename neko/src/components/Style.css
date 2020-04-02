@@ -13,6 +13,9 @@
   border: 1px solid;
 }
 
+.tab {
+  border: 1px solid;
+}
 .images-container{
   /* border-color: black; */
   border-style: groove;
@@ -55,7 +58,6 @@
   align-items: center;
   display: table;
   margin: 0 auto;
-  border: 1px solid black;
 }
 
 .cats-container-row{
@@ -69,21 +71,22 @@
   margin: auto;
 }
 
-.carousel-container{
-  margin-top: 30px;
-  max-height: 650px;
-  max-width: 650px;
-}
-
 .cat-col{
-  border-style: groove;
+  margin-top: 30px;
+  /* margin-top: auto; */
+  margin-bottom: 25px;
 }
 
-.carousel-inner{
+.carousel-container{
+margin-top: auto;
+}
+/* .carousel-inner{
   max-width: 650px;
   max-height: 400px;
   border-style: groove;
-}
-/* .carousel-inner img{
-  max-height: 400px;
 } */
+
+.dropdown{
+  width: 100%;
+  border-style: groove;
+}

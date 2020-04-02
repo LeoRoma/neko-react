@@ -14,7 +14,7 @@ class Cat extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col black-text text-center text-md-left mt-xl-10 mb-10">
+          <div className="col cat-col">
             <h1 className="h1-responsive font-weight-bold mt-sm-5">
               {name}
             </h1>
@@ -34,7 +34,7 @@ class Cat extends Component {
             <p><a href={wikipediaUrl}>More Details</a></p>
           </div>
 
-          <div className="col">
+          <div className="col cat-col">
             <Carousel
               catsImg={this.props.catsImg}
             />
