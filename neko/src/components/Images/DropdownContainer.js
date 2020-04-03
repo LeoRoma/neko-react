@@ -81,7 +81,7 @@ class DropdownBreedImg extends Component {
             {this.state.dropdownBreedActive ? dropdwonBreed : null}
           </div>
         </div>
-        <div className="row">
+        <div className="row row-dropdown-category">
           <div className="col">
             {this.state.dropdownCategoryActive ? dropdownCategory : null}
           </div>

@@ -28,6 +28,7 @@ class DropdownBreeds extends Component {
             style={{ width: "1050px" }}
           >
             <optgroup label="Breeds">
+              <option value="">None</option>
               {optionBreeds}
             </optgroup>
           </Select>
