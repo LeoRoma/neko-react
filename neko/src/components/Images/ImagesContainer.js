@@ -49,7 +49,7 @@ class ImagesContainer extends Component {
             images={currentImages}
           />
         </div>
-        <div className="row row-container">
+        <div className="row" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:"20px" }}>
           <ImagesPagination
             imagesPerPage={this.state.imagesPerPage}
             totalImages={images.length}
