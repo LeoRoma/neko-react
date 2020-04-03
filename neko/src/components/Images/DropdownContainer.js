@@ -92,8 +92,11 @@ class DropdownBreedImg extends Component {
         </div>
 
 
-        <div className="col">
-          <Button onClick={this.handleSubmit.bind(this)}>Search</Button>
+        <div className="row row-search" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+          <Button
+            style={{ color: "#2196F3" }}
+            onClick={this.handleSubmit.bind(this)}
+          >Search</Button>
         </div>
       </div>
     )
