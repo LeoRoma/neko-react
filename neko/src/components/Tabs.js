@@ -31,9 +31,6 @@ class Tablas extends Component {
               images={this.props.images}
             />
           </Tab>
-          <Tab eventKey="more" title="More">
-            More
-          </Tab>
         </Tabs>
       </div>
     )

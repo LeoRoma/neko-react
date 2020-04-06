@@ -46,6 +46,7 @@ class DropdownBreedImg extends Component {
     let selector = this.state.selector;
     let imageId = this.state.imageId;
     let type = this.state.type;
+    console.log(type)
     event.preventDefault();
     this.props.getImages(selector, imageId, type);
   };

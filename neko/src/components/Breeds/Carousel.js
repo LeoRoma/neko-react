@@ -5,18 +5,14 @@ import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer }
 
 const Carousel = ({ catsImg }) => {
   const styles = ({
-    // container: {
-    //   paddingTop: 50,
-    // },
     stretch: {
       width: 50,
       height: 350,
       resizeMode: 'stretch',
     },
   });
-  // const catsImgLength = catsImg.length
-  // console.log(catsImg)
-
+  
+  console.log(catsImg.length)
   return (
     <div>
       <MDBContainer className="carousel-container">
