@@ -14,6 +14,10 @@
 - Type ```npm start``` to start React's server.
 - To visit the website type ```http://localhost:3000/``` on your browser
 
+## Important
+- After you cloned the repository on your folder and you ran ```npm install``` gives you a bug, doesn't load ```react-bootstrap``` plese run ```npm install react-bootstrap bootstrap``` to fix this bug
+ 
+
 ## Tech
 - React
 - React Router Dom
@@ -28,10 +32,10 @@
 ![Image screenshot](./screenshots/breed.png)
 
 ## Search images by breed
-![Image screenshot](./screenshots/imagesbreed.png)
+![Image screenshot](./screenshots/imagebreed.png)
 
 ## Search images by category
-![Image screenshot](./screenshots/imagescategory.png)
+![Image screenshot](./screenshots/imagecategory.png)
 
 ## Search images by category and format
 ![Image screenshot](./screenshots/imageanimated.png)
