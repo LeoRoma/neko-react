@@ -21,3 +21,17 @@
 - Material UI
 - react-bootstrap bootstrap
 - ReactPlayer
+
+## Screenshots
+
+## Search by breeed 
+![Image screenshot](./screenshots/breed.png)
+
+## Search images by breed
+![Image screenshot](./screenshots/imagesbreed.png)
+
+## Search images by category
+![Image screenshot](./screenshots/imagescategory.png)
+
+## Search images by category and format
+![Image screenshot](./screenshots/imageanimated.png)
