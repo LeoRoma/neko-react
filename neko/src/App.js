@@ -24,7 +24,7 @@ class App extends Component {
   };
 
   getCats() {
-    fetch("https://api.thecatapi.com/v1/breeds?1b5970e3-2ecc-4bb9-9d75-d8a644120226")
+    fetch("https://api.thecatapi.com/v1/breeds?f16ad962-557b-4deb-b7ab-626cc52a45f9")
       .then(response => response.json())
       .then(result => this.setState({ breeds: result }))
       .then(result => console.log(this.state.breeds))
