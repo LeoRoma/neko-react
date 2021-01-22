@@ -18,12 +18,12 @@ const DropdownCategory = ({ categories, handleDropdowns }) => {
   return (
     <FormControl key={categories.id}>
       <InputLabel htmlFor="grouped-native-select"></InputLabel>
-      <h7>Category</h7>
+      <h6>Category</h6>
       <Select
         onClick={handleDropdown}
         name="imageId" native defaultValue=""
         input={<Input id="grouped-native-select" />}
-        style={{ width: "720px" }}
+        style={{ width: "300px" }}
       >
         <optgroup label="Breeds">
           <option value="">None</option>

@@ -14,13 +14,13 @@ const DropdownFormat = ({ handleDropdowns }) => {
   return (
     <FormControl>
       <InputLabel htmlFor="grouped-native-select"></InputLabel>
-      <h7>Type</h7>
+      <h6>Type</h6>
       <Select
         name="type"
         onClick={handleDropdown}
         native defaultValue=""
         input={<Input id="grouped-native-select" />}
-        style={{ width: "720px" }}
+        style={{ width: "300px" }}
       >
         <optgroup label="Type">
           <option value="">All</option>

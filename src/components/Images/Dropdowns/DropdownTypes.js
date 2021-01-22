@@ -5,33 +5,31 @@ import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-const DropdownBreed = ({ breeds, handleDropdowns }) => {
-
-  const optionBreeds = breeds.map((breed) =>
-    <option value={breed.id}>{breed.name}</option>
-  );
+const DropdownTypes = ({ handleDropdowns }) => {
 
   const handleDropdown = event => {
     handleDropdowns(event)
   };
 
   return (
-    <FormControl key={breeds.id}>
+    <FormControl>
       <InputLabel htmlFor="grouped-native-select"></InputLabel>
-      <h7>Breed</h7>
+      <h6>Images</h6>
       <Select
         onClick={handleDropdown}
-        name="imageId" native defaultValue=""
+        name="selector"
+        native defaultValue=""
         input={<Input id="grouped-native-select" />}
-        style={{ width: "720px" }}
+        style={{ width: "300px" }}
       >
-        <optgroup label="Breeds">
+        <optgroup label="Images">
           <option value="">None</option>
-          {optionBreeds}
+          <option value="breed">Breed</option>
+          <option value="category">Category</option>
         </optgroup>
       </Select>
     </FormControl>
   )
 };
 
-export default DropdownBreed;
+export default DropdownTypes;
