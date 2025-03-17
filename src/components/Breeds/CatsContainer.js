@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Cats from './Cats';
-import DropdownBreeds from './DropdownBreeds';
+import Cats from "./Cats";
+import DropdownBreeds from "./DropdownBreeds";
 
 // import './Cat.css';
 
@@ -17,13 +17,10 @@ class CatsContainer extends Component {
           />
         </div>
         <div className="row cats-container-row">
-          <Cats
-            cats={this.props.cats}
-            catsImg={this.props.catsImg}
-          />
+          <Cats cats={this.props.cats} catsImg={this.props.catsImg} />
         </div>
       </div>
-    )
+    );
   }
 }
 

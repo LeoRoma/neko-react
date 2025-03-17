@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Tabs from './Tabs'
+import Tabs from "./Tabs";
 
-// import Frame from './Frame'
-import Navbar from './Navbar';
-// import Player from './Player';
-// import Test from './Test'
+import Navbar from "./Navbar";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
-  };
+    this.state = {};
+  }
   render() {
-  
     return (
       <div>
         <Navbar />
@@ -32,8 +26,8 @@ class Home extends Component {
         />
         {/* <Player /> */}
       </div>
-    )
-  };
-};
+    );
+  }
+}
 
 export default Home;

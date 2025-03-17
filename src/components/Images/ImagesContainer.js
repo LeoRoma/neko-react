@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import DropdownContainer from './DropdownContainer';
-import Images from './Images';
-import ImagesPagination from './ImagesPagination';
+import DropdownContainer from "./DropdownContainer";
+import Images from "./Images";
+import ImagesPagination from "./ImagesPagination";
 
 class ImagesContainer extends Component {
   constructor(props) {
@@ -11,25 +11,28 @@ class ImagesContainer extends Component {
       currentPage: 1,
       setCurrentPage: 1,
       imagesPerPage: 9,
-    }
-  };
+    };
+  }
 
   //Change page
 
   getCurrentPage(pageNumber) {
     this.setState({
-      currentPage: pageNumber
-    })
-  };
+      currentPage: pageNumber,
+    });
+  }
 
   render() {
-    // For the pagination 
+    // For the pagination
 
     const indexOfLastImage = this.state.currentPage * this.state.imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - this.state.imagesPerPage;
-    const currentImages = this.props.images.slice(indexOfFirstImage, indexOfLastImage)
+    const currentImages = this.props.images.slice(
+      indexOfFirstImage,
+      indexOfLastImage
+    );
 
-    // Images 
+    // Images
 
     const images = this.props.images;
 
@@ -45,11 +48,17 @@ class ImagesContainer extends Component {
           </div>
         </div>
         <div className="row row-container">
-          <Images
-            images={currentImages}
-          />
+          <Images images={currentImages} />
         </div>
-        <div className="row" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop:"20px" }}>
+        <div
+          className="row"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "20px",
+          }}
+        >
           <ImagesPagination
             imagesPerPage={this.state.imagesPerPage}
             totalImages={images.length}
@@ -57,7 +66,7 @@ class ImagesContainer extends Component {
           />
         </div>
       </div>
-    )
+    );
   }
 }
 

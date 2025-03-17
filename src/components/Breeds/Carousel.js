@@ -1,18 +1,22 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
-  "mdbreact";
-
+import {
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBContainer,
+} from "mdbreact";
 
 const Carousel = ({ catsImg }) => {
-  const styles = ({
+  const styles = {
     stretch: {
       width: 50,
       height: 350,
-      resizeMode: 'stretch',
+      resizeMode: "stretch",
     },
-  });
-  
-  console.log(catsImg.length)
+  };
+
+  console.log(catsImg?.length);
   return (
     <div>
       <MDBContainer className="carousel-container">
@@ -24,7 +28,7 @@ const Carousel = ({ catsImg }) => {
           className="z-depth-1"
         >
           <MDBCarouselInner className="carousel-inner">
-            {catsImg.map((catImg, index) => (
+            {catsImg?.map((catImg, index) => (
               <MDBCarouselItem className="container-img" itemId={index}>
                 <MDBView className="thumbnail">
                   <img
@@ -41,6 +45,6 @@ const Carousel = ({ catsImg }) => {
       </MDBContainer>
     </div>
   );
-}
+};
 
 export default Carousel;
